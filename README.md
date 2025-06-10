@@ -50,6 +50,7 @@ Backend:
 1. Create virtual python environment with `python3 -m venv .venv`
 2. Activate virtual python environment with `source .venv/bin/activate`
 3. Run `cd backend`
-4. Run `
+4. Create a .env file using the sample provided
+5. Run `python manage.py runserver`
 
 Or for a dockerized development environment, run `docker compose -f docker-compose.dev.yml up`
