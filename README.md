@@ -49,4 +49,7 @@ Frontend:
 Backend:
 1. Create virtual python environment with `python3 -m venv .venv`
 2. Activate virtual python environment with `source .venv/bin/activate`
-3. 
+3. Run `cd backend`
+4. Run `
+
+Or for a dockerized development environment, run `docker compose -f docker-compose.dev.yml up`
