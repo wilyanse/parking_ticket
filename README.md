@@ -38,3 +38,15 @@ Database: Postgres
 In order to run the app, navigate to the main "parking_ticket" directory and run `docker compose up`
 
 ## Development and deployment notes
+For development:
+
+Frontend:
+1. Install NodeJS
+2. Run `cd frontend`
+3. Run `npm install`
+4. Run `npm run dev`
+
+Backend:
+1. Create virtual python environment with `python3 -m venv .venv`
+2. Activate virtual python environment with `source .venv/bin/activate`
+3. 
