@@ -18,6 +18,17 @@ User = get_user_model()
 def run():
     print("Initializing synthetic data...")
 
+    # Create superuser
+    if not User.objects.filter(username="admin").exists():
+        User.objects.create_superuser(
+            username="admin",
+            email="admin@example.com",
+            password="admin123"
+        )
+        print("Superuser 'admin' created with password 'admin123'")
+    else:
+        print("Superuser 'admin' already exists.")
+        
     # Create users
     users = []
     for i in range(5):
@@ -26,7 +37,7 @@ def run():
             defaults={
                 "email": f"user{i+1}@example.com",
                 "is_active": True,
-                "password": "password123",  # Set manually or use set_password
+                "password": "$fake$hashed$pass",  # Set manually or use set_password
             }
         )
         users.append(user)
