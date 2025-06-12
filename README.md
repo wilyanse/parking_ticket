@@ -27,6 +27,42 @@ Specifically, a user can:
 - [ ] Cancel a reservation before the start time.
 - [ ] Receive alerts for reservation expiration or cancellation.
 
+### Database Schema
+users:
+- id
+- username
+- role
+- password
+- email
+- active
+- date_created
+- date_updated
+
+parking_locations:
+- id
+- name
+- description
+- location
+- date_created
+- date_updated
+
+parking_slots:
+- id
+- parking_location_id FK
+- status
+- date_created
+- date_updated
+
+reservations:
+- id
+- start_time
+- end_time
+- parking_location_id FK
+- user_id FK
+- date_created
+- date_updated
+- status
+
 ## Tech stack
 Frontend: React
 
