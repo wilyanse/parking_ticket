@@ -28,15 +28,7 @@ Specifically, a user can:
 - [ ] Receive alerts for reservation expiration or cancellation.
 
 ### Database Schema
-users:
-- id
-- username
-- role
-- password
-- email
-- active
-- date_created
-- date_updated
+Below are the tables generated outside of Django's automatically generated tables for users, groups, and permissions.
 
 parking_locations:
 - id
