@@ -10,26 +10,26 @@ In Parking ticket, you have 2 roles! You can be an admin, one that owns and mana
 
 Specifically, an admin can:
 - [ ] Log in securely to access the admin dashboard.
-    - [ ] Backend - API call to login
+    - [/] Backend - API call to login
     - [ ] Backend - Limit views based on group/permissions
     - [ ] Frontend - Admin dashboard
 - [ ] Add, update, or delete parking locations
-    - [ ] Backend - API call to add
-    - [ ] Backend - API call to update
-    - [ ] Backend - API call to delete
+    - [/] Backend - API call to add
+    - [/] Backend - API call to update
+    - [/] Backend - API call to delete
     - [ ] Frontend - Add screen
     - [ ] Frontend - Update screen
     - [ ] Frontend - Delete screen
 - [ ] Define the number of slots available for each location
-    - [ ] Backend - API call to list all parking locations
+    - [/] Backend - API call to list all parking locations
     - [ ] Backend - API call to check number of slots available per parking location
     - [ ] Frontend - Table for parking locations
     - [ ] Frontend - Individual parking location screen
 - [ ] View a list of current and upcoming reservations
-    - [ ] Backend - API call to see list of reservations
+    - [/] Backend - API call to see list of reservations
     - [ ] Frontned - Table for reservations
 - [ ] Cancel user reservations if necessary
-    - [ ] Backend - API call to modify reservation status
+    - [/] Backend - API call to modify reservation status
     - [ ] Frontend - Screen to cancel reservation
 - [ ] View a summary of parking activity (e.g., total reservations per day).
     - [ ] Backend - API call by date range to see statistics
@@ -37,37 +37,37 @@ Specifically, an admin can:
         - May include reservations per day/per week/ per month
         - Include statistical comparison from day to day, week to week, month to month
 - [ ] Manage user accounts (view and deactivate if needed).
-    - [ ] Backend - API call to see list of user accounts
-    - [ ] Backend - API call to modify user account by ID
+    - [/] Backend - API call to see list of user accounts
+    - [/] Backend - API call to modify user account by ID
     - [ ] Frontend - Screen for list of user accounts
     - [ ] Frontend - Screen for individual accounts
 
 Specifically, a user can:
 - [ ] Register for an account and log in securely.
-    - [ ] Backend - Login account
+    - [/] Backend - Login account
     - [ ] Backend - Register account
     - [ ] Frontend - Landing page with registration details
     - [ ] Frontend - Landing page with login screen
 - [ ] Update account profile and password.
-    - [ ] Backend - Update account by ID
+    - [/] Backend - Update account by ID
     - [ ] Frontend - Profile screen
     - [ ] Frontend - Change details screen
 - [ ] View a list or visual representation of available parking locations.
-    - [ ] Backend - Obtain list of parking locations
+    - [/] Backend - Obtain list of parking locations
     - [ ] Frontend - Table to see parking locations
 - [ ] See real-time availability of parking slots of a location.
-    - [ ] Backend - get location details by ID
+    - [/] Backend - get location details by ID
     - [ ] Frontend - Screen for location details
 - [ ] Reserve a parking slot and receive confirmation.
-    - [ ] Backend - get details per parking slot
+    - [/] Backend - get details per parking slot
     - [ ] Backend - send confirmation response
     - [ ] Backend - send details to email
     - [ ] Frontend - screen for parking slot reservation
 - [ ] View active and past reservations.
-    - [ ] Backend - list reservations by user ID
+    - [/] Backend - list reservations by user ID
     - [ ] Frontend - table for reservations by user ID
 - [ ] Cancel a reservation before the start time.
-    - [ ] Backend - modify reservation status
+    - [/] Backend - modify reservation status
     - [ ] Frontend - View reservation details by reservation ID
 - [ ] Receive alerts for reservation expiration or cancellation.
     - [ ] Backend - send email
