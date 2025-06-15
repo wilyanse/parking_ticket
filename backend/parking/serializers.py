@@ -11,6 +11,7 @@ class ParkingSlotSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingSlot
         fields = '__all__'
+        read_only_fields = ['parking_location']
 
 class ReservationSerializer(serializers.ModelSerializer):
     class Meta:
