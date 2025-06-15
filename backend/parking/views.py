@@ -1,5 +1,7 @@
 # parking/views.py
 from rest_framework import viewsets
+from rest_framework.response import Response
+from rest_framework.decorators import action
 from .models import ParkingLocation, ParkingSlot, Reservation
 from .serializers import ParkingLocationSerializer, ParkingSlotSerializer, ReservationSerializer
 
@@ -14,6 +16,14 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
         elif self.action in ['create', 'update', 'partial_update', 'destroy']:
             self.allowed_groups = ['admin']
         return super().get_permissions()
+    
+    @action(detail=True, methods=['get'])
+    def slots(self, request, pk=None):
+
+        location = self.get_object()
+        slots = location.slots.all()
+        serializer = ParkingSlotSerializer(slots, many=True)
+        return Response(serializer.data)
 
 class ParkingSlotViewSet(viewsets.ModelViewSet):
     queryset = ParkingSlot.objects.all()
