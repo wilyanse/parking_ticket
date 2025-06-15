@@ -7,9 +7,25 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
     queryset = ParkingLocation.objects.all()
     serializer_class = ParkingLocationSerializer
 
+    def get_permissions(self):
+        # Define allowed groups per action
+        if self.action in ['list', 'retrieve']:
+            self.allowed_groups = ['admin', 'user']
+        elif self.action in ['create', 'update', 'partial_update', 'destroy']:
+            self.allowed_groups = ['admin']
+        return super().get_permissions()
+
 class ParkingSlotViewSet(viewsets.ModelViewSet):
     queryset = ParkingSlot.objects.all()
     serializer_class = ParkingSlotSerializer
+
+    def get_permissions(self):
+        # Define allowed groups per action
+        if self.action in ['list', 'retrieve', 'partial_update']:
+            self.allowed_groups = ['admin', 'user']
+        elif self.action in ['create', 'update', 'destroy']:
+            self.allowed_groups = ['admin']
+        return super().get_permissions()
 
 class ReservationViewSet(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
