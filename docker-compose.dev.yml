@@ -40,7 +40,7 @@ services:
     volumes:
       - ./frontend:/app
     ports:
-      - "5173:5173"
+      - "8080:8080"
     stdin_open: true
     tty: true
     depends_on:

@@ -84,6 +84,7 @@ parking_locations:
 - location
 - date_created
 - date_updated
+- user_id FK
 
 parking_slots:
 - id
