@@ -9,6 +9,7 @@ import LogoutPage from "@/pages/logout";
 import LocationsPage from "@/pages/locations";
 import ParkingLotsPage from "@/pages/ParkingLotPage";
 import ProfilePage from "./pages/ProfilePage";
+import UsersPage from "./pages/UsersPage";
 // import DocsPage from "@/pages/docs";
 // import PricingPage from "@/pages/pricing";
 // import BlogPage from "@/pages/blog";
@@ -26,6 +27,7 @@ function App() {
       <Route element={<ParkingLotsPage />} path="/locations/:lotId" />
       <Route element={<ReservationsPage />} path="/reservations" />
       <Route element={<ProfilePage />} path="/profile" />
+      <Route element={<UsersPage />} path="/users" />
       {/* <Route element={<DocsPage />} path="/docs" />
       <Route element={<PricingPage />} path="/pricing" />
       <Route element={<BlogPage />} path="/blog" />

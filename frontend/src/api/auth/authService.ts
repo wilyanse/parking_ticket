@@ -46,13 +46,20 @@ interface RegisterData {
   username: string;
   password: string;
   email: string;
+  isAdmin: boolean;
 }
 
-export const register = async ({ username, password, email }: RegisterData) => {
+export const register = async ({
+  username,
+  password,
+  email,
+  isAdmin,
+}: RegisterData) => {
   const response = await axios.post(`${API_URL}/api/users/`, {
     username,
     password,
     email,
+    is_staff: isAdmin,
   });
 
   return response.data;
@@ -91,6 +98,12 @@ export const enableUser = async (userId: number) => {
     `${API_URL}/api/users/${userId}/`,
     { is_active: true },
   );
+
+  return response.data;
+};
+
+export const getUsers = async () => {
+  const response = await axiosInstance.get(`${API_URL}/api/users/`);
 
   return response.data;
 };

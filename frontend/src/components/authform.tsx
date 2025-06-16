@@ -35,6 +35,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
     onSignUp?.(signUpName, signUpEmail, signUpPassword);
+    setSelected("login");
   };
 
   return (

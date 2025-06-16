@@ -10,7 +10,7 @@ import {
 } from "@heroui/react";
 import React from "react";
 
-import { logout, updateUser } from "@/api/auth/authService";
+import { logout, updateUser, disableUser } from "@/api/auth/authService";
 
 export default function ProfileDetails() {
   const userStr = localStorage.getItem("currentUser");
@@ -36,6 +36,7 @@ export default function ProfileDetails() {
     try {
       await updateUser(user.user_id, { username, email });
       const updatedUser = { ...user, username, email };
+
       localStorage.setItem("currentUser", JSON.stringify(updatedUser));
       setUser(updatedUser);
       alert("Profile updated!");
@@ -68,10 +69,38 @@ export default function ProfileDetails() {
         <p className="text-gray-600 mb-1">
           Role: {user.is_staff ? "Admin" : "User"}
         </p>
-        <div className="flex gap-2 mt-6 justify-center">
-          <Button color="primary" onPress={onOpen}>
-            Edit
-          </Button>
+        <div className="flex flex-col gap-2 mt-6 items-center">
+          <div className="flex gap-2">
+            <Button color="primary" onPress={onOpen}>
+              Edit
+            </Button>
+            <Button
+              color="warning"
+              isLoading={loading}
+              variant="flat"
+              onPress={async () => {
+                if (
+                  !window.confirm(
+                    "Are you sure you want to disable your account? This action cannot be undone.",
+                  )
+                )
+                  return;
+                setLoading(true);
+                try {
+                  await disableUser(user.user_id);
+                  localStorage.removeItem("currentUser");
+                  alert("Your account has been disabled.");
+                  logout();
+                } catch {
+                  alert("Failed to disable account.");
+                } finally {
+                  setLoading(false);
+                }
+              }}
+            >
+              Disable Account
+            </Button>
+          </div>
           <Button color="danger" onPress={logout}>
             Logout
           </Button>

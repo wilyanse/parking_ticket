@@ -33,7 +33,7 @@ export default function IndexPage() {
             <div className="flex gap-2 mt-auto">
               <Link
                 className={buttonStyles({ color: "primary", radius: "full" })}
-                href="/admin/login"
+                href="/login"
               >
                 Get started as an admin
               </Link>

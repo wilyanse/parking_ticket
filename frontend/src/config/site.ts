@@ -8,23 +8,11 @@ export const siteConfig = {
       label: "Home",
       href: "/",
     },
-    {
-      label: "About",
-      href: "/about",
-    },
   ],
   navMenuItems: [
     {
       label: "Dashboard",
       href: "/dashboard",
-    },
-    {
-      label: "Profile",
-      href: "/profile",
-    },
-    {
-      label: "Settings",
-      href: "/settings",
     },
     {
       label: "Parking Lots",
@@ -33,6 +21,14 @@ export const siteConfig = {
     {
       label: "Reservations",
       href: "/reservations",
+    },
+    {
+      label: "Users",
+      href: "/users",
+    },
+    {
+      label: "Profile",
+      href: "/profile",
     },
     {
       label: "Logout",

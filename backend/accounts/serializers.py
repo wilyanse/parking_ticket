@@ -11,13 +11,14 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = ['id', 'username', 'email', 'is_active', 'is_staff', 'password']
-        read_only_fields = ['id', 'is_staff']
+        read_only_fields = ['id']
 
     def create(self, validated_data):
         user = User(
             username=validated_data['username'],
             email=validated_data['email'],
-            is_active=validated_data.get('is_active', True)
+            is_active=validated_data.get('is_active', True),
+            is_staff=validated_data.get('is_staff', True)
         )
         user.set_password(validated_data['password'])
         user.save()

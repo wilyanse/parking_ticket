@@ -159,7 +159,7 @@ export default function App() {
                     login({ username, password })
                   }
                   onSignUp={(username, password, email) =>
-                    register({ username, password, email })
+                    register({ username, password, email, isAdmin: false })
                   }
                 />
               </div>
@@ -185,7 +185,7 @@ export default function App() {
                     login({ username, password })
                   }
                   onSignUp={(username, email, password) =>
-                    register({ username, password, email })
+                    register({ username, password, email, isAdmin: true })
                   }
                 />
               </div>
