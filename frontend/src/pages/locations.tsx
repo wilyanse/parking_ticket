@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 
 import DefaultLayout from "@/layouts/default";
 import { Locations } from "@/components/locations";
-import { getParkingLocations } from "@/api/parking/parkinglots";
+import { getParkingLocationsByUser } from "@/api/parking/parkinglots";
 
 export default function LocationsPage() {
   const [locations, setLocations] = useState<Location[] | null>(null);
 
   useEffect(() => {
-    getParkingLocations().then((data) => {
+    getParkingLocationsByUser().then((data) => {
       setLocations(data);
     });
   }, []);

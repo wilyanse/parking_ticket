@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "Parking Ticket",
-  description: "Make beautiful websites regardless of your design experience.",
+  description: "Turn parking into a movie screening.",
   navItems: [
     {
       label: "Home",

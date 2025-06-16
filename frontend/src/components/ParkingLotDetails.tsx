@@ -152,7 +152,11 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
               <TableColumn className="text-center">STATUS</TableColumn>
               <TableColumn className="text-center">RESERVATION</TableColumn>
             </TableHeader>
-            <TableBody>
+            <TableBody
+              emptyContent={
+                <span className="text-gray-500">No slots found.</span>
+              }
+            >
               {items.map((slot, idx) => (
                 <TableRow key={slot.id}>
                   <TableCell className="text-center">

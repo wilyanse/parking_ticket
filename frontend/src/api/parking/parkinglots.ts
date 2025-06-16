@@ -26,6 +26,16 @@ export async function getParkingLocationById(id: string) {
   return response.data;
 }
 
+export async function getParkingLocationsByUser() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const userId = currentUser.user_id;
+  const response = await axiosInstance.get(
+    `${API_URL}/api/locations/by_user/?user_id=${userId}`,
+  );
+
+  return response.data;
+}
+
 export async function updateParkingLocation(
   id: string,
   data: { name?: string; location?: string; description?: string },

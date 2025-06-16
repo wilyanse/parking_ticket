@@ -15,8 +15,8 @@ export default function HomePage() {
       navigate("/", { replace: true });
     }
   }, [navigate]);
-  const userStr = localStorage.getItem("currentUser");
 
+  const userStr = localStorage.getItem("currentUser");
   const user = userStr ? JSON.parse(userStr) : null;
   const isAdmin = user && user.is_staff === true;
 
@@ -37,31 +37,52 @@ export default function HomePage() {
         <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl">
           {/* Admin Section */}
           {isAdmin && (
-            <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col">
+            <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col items-center text-center">
               <h2 className="text-xl font-semibold mb-2">Admin Dashboard</h2>
-              <ul className="list-disc list-inside text-left text-gray-700 mb-4">
+              <ul className="list-disc list-inside text-gray-700 mb-4 text-left mx-auto max-w-md">
                 <li>View, add, update, or delete parking locations</li>
                 <li>Define and manage slots for each location</li>
                 <li>See all current and upcoming reservations</li>
                 <li>Cancel user reservations if necessary</li>
                 <li>Monitor parking activity and view statistics</li>
                 <li>Manage user accounts (view, deactivate, or update)</li>
+                <li>Update your profile and password</li>
               </ul>
-              <div className="flex gap-2 mt-auto">
+              <div className="flex flex-wrap justify-center gap-2 mt-auto">
                 <Link
                   className={buttonStyles({ color: "primary", radius: "full" })}
                   href="/locations"
                 >
-                  Manage Locations
+                  Manage Parking Lots
                 </Link>
                 <Link
                   className={buttonStyles({
                     variant: "bordered",
                     radius: "full",
                   })}
+                  href="/reservations"
+                >
+                  View Reservations
+                </Link>
+                <Link
+                  className={buttonStyles({
+                    variant: "flat",
+                    color: "secondary",
+                    radius: "full",
+                  })}
                   href="/users"
                 >
                   Manage Users
+                </Link>
+                <Link
+                  className={buttonStyles({
+                    variant: "flat",
+                    color: "default",
+                    radius: "full",
+                  })}
+                  href="/profile"
+                >
+                  Profile
                 </Link>
               </div>
             </div>
@@ -81,7 +102,7 @@ export default function HomePage() {
                 <li>Update your profile and password</li>
                 <li>Receive alerts for reservation status</li>
               </ul>
-              <div className="flex gap-2 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto">
                 <Link
                   className={buttonStyles({ color: "primary", radius: "full" })}
                   href="/locations"
@@ -96,6 +117,16 @@ export default function HomePage() {
                   href="/reservations"
                 >
                   My Reservations
+                </Link>
+                <Link
+                  className={buttonStyles({
+                    variant: "flat",
+                    color: "default",
+                    radius: "full",
+                  })}
+                  href="/profile"
+                >
+                  Profile
                 </Link>
               </div>
             </div>

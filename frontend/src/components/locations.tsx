@@ -77,7 +77,11 @@ export const Locations: React.FC<LocationsProps> = ({
               <TableColumn>LOCATION</TableColumn>
               {/* <TableColumn>ACTIONS</TableColumn> */}
             </TableHeader>
-            <TableBody>
+            <TableBody
+              emptyContent={
+                "No Parking Lots found. Start by adding a new Parking Lot."
+              }
+            >
               {items.map((loc) => (
                 <TableRow
                   key={loc.id}
@@ -89,24 +93,6 @@ export const Locations: React.FC<LocationsProps> = ({
                   <TableCell>{loc.name}</TableCell>
                   <TableCell>{loc.description}</TableCell>
                   <TableCell>{loc.location}</TableCell>
-                  {/* <TableCell>
-                    {isAdmin ? (
-                      <div className="flex gap-2">
-                      <button
-                        className="text-secondary-500 hover:underline"
-                        onClick={() => alert(`Edit ${loc}`)}
-                      >
-                        <EditIcon />
-                      </button>
-                      <button
-                        className="text-tertiary-500 hover:underline"
-                        onClick={() => alert(`Delete ${loc}`)}
-                      >
-                        <DeleteIcon />
-                      </button>
-                      </div>
-                    ) : null}
-                    </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

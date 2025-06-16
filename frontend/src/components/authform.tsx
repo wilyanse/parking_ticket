@@ -2,8 +2,8 @@ import React from "react";
 import { Tabs, Tab, Input, Link, Button, Card, CardBody } from "@heroui/react";
 
 export interface AuthFormProps {
-  onLogin?: (email: string, password: string) => void;
-  onSignUp?: (name: string, email: string, password: string) => void;
+  onLogin?: (email: string, password: string) => Promise<{ error?: string } | void> | { error?: string } | void;
+  onSignUp?: (name: string, email: string, password: string) => Promise<{ error?: string } | void> | { error?: string } | void;
   initialTab?: "login" | "sign-up";
   headerText?: React.ReactNode;
 }
@@ -27,15 +27,51 @@ export const AuthForm: React.FC<AuthFormProps> = ({
   const [signUpEmail, setSignUpEmail] = React.useState("");
   const [signUpPassword, setSignUpPassword] = React.useState("");
 
-  const handleLogin = (e: React.FormEvent) => {
+  const [error, setError] = React.useState<string | null>(null);
+
+  const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    onLogin?.(loginUsername, loginPassword);
+    setError(null);
+    try {
+      const result = await onLogin?.(loginUsername, loginPassword);
+
+
+      // If onLogin returns a value, check for error indication
+      if (
+        result &&
+        typeof result === "object" &&
+        "error" in result &&
+        result.error
+      ) {
+        setError(result.error);
+      }
+    } catch (err: any) {
+      alert("Login failed. Please try again.");
+      setError(err?.message || "Login failed. Please try again.");
+    }
   };
 
-  const handleSignUp = (e: React.FormEvent) => {
+  const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
-    onSignUp?.(signUpName, signUpEmail, signUpPassword);
-    setSelected("login");
+    setError(null);
+    try {
+      const result = await onSignUp?.(signUpName, signUpEmail, signUpPassword);
+
+      if (
+        result &&
+        typeof result === "object" &&
+        "error" in result &&
+        result.error
+      ) {
+        setError(result.error);
+
+        return;
+      }
+      setSelected("login");
+    } catch (err: any) {
+      alert("Sign up failed. Please try again.");
+      setError(err?.message || "Sign up failed. Please try again.");
+    }
   };
 
   return (
