@@ -9,42 +9,36 @@ def create_default_groups_with_permissions(apps, schema_editor):
     admin_group, _ = Group.objects.get_or_create(name='admin')
     user_group, _ = Group.objects.get_or_create(name='user')
 
-    # Example: give admin full access to the ParkingLocation model
+    # ParkingLocation permissions
     parking_ct = ContentType.objects.get(app_label='parking', model='parkinglocation')
     parking_permissions = Permission.objects.filter(content_type=parking_ct)
     admin_group.permissions.set(parking_permissions)
+    user_group.permissions.set(parking_permissions.filter(codename__startswith='view_'))
 
-    # Give users only 'view' permission to ParkingLocation
-    view_parking = parking_permissions.filter(codename__startswith='view_')
-    user_group.permissions.set(view_parking)
-
-    # You can repeat this for other models like ParkingSlot, Reservation, etc.
+    # ParkingSlot permissions
     slot_ct = ContentType.objects.get(app_label='parking', model='parkingslot')
     slot_permissions = Permission.objects.filter(content_type=slot_ct)
     admin_group.permissions.add(*slot_permissions)
     user_group.permissions.add(*slot_permissions.filter(codename__startswith='view_'))
 
-    # Reservation: users can add/view their own reservations, admin has all
+    # Reservation permissions
     reservation_ct = ContentType.objects.get(app_label='parking', model='reservation')
     reservation_permissions = Permission.objects.filter(content_type=reservation_ct)
     admin_group.permissions.add(*reservation_permissions)
     user_group.permissions.add(*reservation_permissions.filter(codename__in=['add_reservation', 'view_reservation']))
 
-    # Add permissions for user management
+    # User management permissions
     user_ct = ContentType.objects.get(app_label='auth', model='user')
     user_permissions = Permission.objects.filter(content_type=user_ct)
-
-    # Give full user management to admins
     admin_group.permissions.add(*user_permissions)
 
 class Migration(migrations.Migration):
-
-    initial = True
 
     dependencies = [
         ('auth', '0001_initial'),
         ('contenttypes', '0002_remove_content_type_name'),
         ('parking', '0001_initial'),
+        ('accounts', '0001_initial'),  # depends on your initial accounts migration
     ]
 
     operations = [
