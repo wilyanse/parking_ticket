@@ -19,7 +19,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
   );
 
   // Login form state
-  const [loginEmail, setLoginEmail] = React.useState("");
+  const [loginUsername, setLoginUsername] = React.useState("");
   const [loginPassword, setLoginPassword] = React.useState("");
 
   // Sign up form state
@@ -29,7 +29,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    onLogin?.(loginEmail, loginPassword);
+    onLogin?.(loginUsername, loginPassword);
   };
 
   const handleSignUp = (e: React.FormEvent) => {
@@ -55,11 +55,11 @@ export const AuthForm: React.FC<AuthFormProps> = ({
               <form className="flex flex-col gap-4" onSubmit={handleLogin}>
                 <Input
                   isRequired
-                  label="Email"
-                  placeholder="Enter your email"
-                  type="email"
-                  value={loginEmail}
-                  onValueChange={setLoginEmail}
+                  label="Username"
+                  placeholder="Enter your username"
+                  type="username"
+                  value={loginUsername}
+                  onValueChange={setLoginUsername}
                 />
                 <Input
                   isRequired

@@ -4,6 +4,8 @@ import { JSX } from "react/jsx-runtime";
 
 import DefaultLayout from "@/layouts/default";
 import AuthForm from "@/components/authform";
+import axiosInstance from "@/api/axios";
+import { login } from "@/api/auth/authService";
 
 export const CarIcon = (
   props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
@@ -152,7 +154,12 @@ export default function App() {
                 <div className="text-gray-600">{userIntro}</div>
               </div>
               <div className="flex-1">
-                <AuthForm headerText={userWelcome} />
+                <AuthForm
+                  headerText={userWelcome}
+                  onLogin={(username, password) =>
+                    login({ username, password })
+                  }
+                />
               </div>
             </div>
           </Tab>

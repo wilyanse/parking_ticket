@@ -1,9 +1,6 @@
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 
-import { siteConfig } from "@/config/site";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -12,10 +9,12 @@ export default function IndexPage() {
       <section className="flex flex-col items-center justify-center gap-8 py-10 md:py-16">
         <div className="inline-block max-w-2xl text-center justify-center">
           <h1 className="text-4xl font-bold mb-2">
-            Parking Ticket: Treat your parking lot like it&apos;s a movie screening!
+            Parking Ticket: Treat your parking lot like it&apos;s a movie
+            screening!
           </h1>
           <p className="text-lg text-gray-600 mb-4">
-            Parking ticket is a full-stack application built with React, Django, and Postgres to make parking management easy for admins and users.
+            Parking ticket is a full-stack application built with React, Django,
+            and Postgres to make parking management easy for admins and users.
           </p>
         </div>
 
@@ -63,7 +62,7 @@ export default function IndexPage() {
           </div>
         </div>
 
-{/*         <div className="flex gap-4 mt-4">
+        {/*         <div className="flex gap-4 mt-4">
           <Link
             isExternal
             className={buttonStyles({
