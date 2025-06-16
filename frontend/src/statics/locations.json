@@ -1,0 +1,202 @@
+[
+    {
+        "id": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37",
+        "name": "Lot 1",
+        "description": "Well-lit secure parking.",
+        "location": "Zone A",
+        "date_created": "2025-06-12T07:23:08.713935Z",
+        "date_updated": "2025-06-12T07:23:08.713943Z"
+    },
+    {
+        "id": "bc34d0de-0f62-44ec-b857-67ef6692ccbe",
+        "name": "Lot 2",
+        "description": "Well-lit secure parking.",
+        "location": "Zone B",
+        "date_created": "2025-06-12T07:23:08.714689Z",
+        "date_updated": "2025-06-12T07:23:08.714694Z"
+    },
+    {
+        "id": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0",
+        "name": "Lot 3",
+        "description": "Well-lit secure parking.",
+        "location": "Zone C",
+        "date_created": "2025-06-12T07:23:08.715179Z",
+        "date_updated": "2025-06-12T07:23:08.715183Z"
+    },
+    {
+        "id": "f5767958-c65e-4893-8411-c84f734142b1",
+        "name": "Lot 4",
+        "description": "Well-lit secure parking.",
+        "location": "Zone D",
+        "date_created": "2025-06-12T07:23:08.715662Z",
+        "date_updated": "2025-06-12T07:23:08.715667Z"
+    },
+    {
+        "id": "53ada10f-f683-4b12-9f51-112b8a8cfedf",
+        "name": "Lot 5",
+        "description": "Well-lit secure parking.",
+        "location": "Zone E",
+        "date_created": "2025-06-12T07:23:08.716214Z",
+        "date_updated": "2025-06-12T07:23:08.716218Z"
+    },
+    {
+        "id": "788f712e-699b-41f9-827e-c9247866fa44",
+        "name": "Lot 6",
+        "description": "Well-lit secure parking.",
+        "location": "Zone F",
+        "date_created": "2025-06-12T07:23:08.716678Z",
+        "date_updated": "2025-06-12T07:23:08.716682Z"
+    },
+    {
+        "id": "b0454146-dd98-40cc-a73f-81aa498afae3",
+        "name": "Lot 7",
+        "description": "Well-lit secure parking.",
+        "location": "Zone G",
+        "date_created": "2025-06-12T07:23:08.717118Z",
+        "date_updated": "2025-06-12T07:23:08.717122Z"
+    },
+    {
+        "id": "09ba30be-d12e-4116-b3f8-ad37717111f0",
+        "name": "Lot 8",
+        "description": "Well-lit secure parking.",
+        "location": "Zone H",
+        "date_created": "2025-06-12T07:23:08.717630Z",
+        "date_updated": "2025-06-12T07:23:08.717636Z"
+    },
+    {
+        "id": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac",
+        "name": "Lot 9",
+        "description": "Well-lit secure parking.",
+        "location": "Zone I",
+        "date_created": "2025-06-12T07:23:08.718117Z",
+        "date_updated": "2025-06-12T07:23:08.718121Z"
+    },
+    {
+        "id": "8b5418df-84b6-436a-a148-10b606dd614f",
+        "name": "Lot 10",
+        "description": "Well-lit secure parking.",
+        "location": "Zone J",
+        "date_created": "2025-06-12T07:23:08.718577Z",
+        "date_updated": "2025-06-12T07:23:08.718581Z"
+    },
+    {
+        "id": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e",
+        "name": "Lot 1",
+        "description": "Well-lit secure parking.",
+        "location": "Zone A",
+        "date_created": "2025-06-12T07:37:50.093552Z",
+        "date_updated": "2025-06-12T07:37:50.093561Z"
+    },
+    {
+        "id": "75c4b76f-3f91-4b54-beff-c529ca07c078",
+        "name": "Lot 2",
+        "description": "Well-lit secure parking.",
+        "location": "Zone B",
+        "date_created": "2025-06-12T07:37:50.094410Z",
+        "date_updated": "2025-06-12T07:37:50.094416Z"
+    },
+    {
+        "id": "61de3ec4-93a3-45a8-953d-452b90c3e83e",
+        "name": "Lot 3",
+        "description": "Well-lit secure parking.",
+        "location": "Zone C",
+        "date_created": "2025-06-12T07:37:50.095110Z",
+        "date_updated": "2025-06-12T07:37:50.095115Z"
+    },
+    {
+        "id": "a1a87145-0656-4acf-90b2-b43d093c9615",
+        "name": "Lot 4",
+        "description": "Well-lit secure parking.",
+        "location": "Zone D",
+        "date_created": "2025-06-12T07:37:50.095603Z",
+        "date_updated": "2025-06-12T07:37:50.095607Z"
+    },
+    {
+        "id": "aac844c0-d99b-47ff-9f36-4c80882c57a9",
+        "name": "Lot 5",
+        "description": "Well-lit secure parking.",
+        "location": "Zone E",
+        "date_created": "2025-06-12T07:37:50.096262Z",
+        "date_updated": "2025-06-12T07:37:50.096267Z"
+    },
+    {
+        "id": "319c8a31-e956-4621-b2d3-b960bb32a898",
+        "name": "Lot 6",
+        "description": "Well-lit secure parking.",
+        "location": "Zone F",
+        "date_created": "2025-06-12T07:37:50.096844Z",
+        "date_updated": "2025-06-12T07:37:50.096849Z"
+    },
+    {
+        "id": "08c8074c-5004-40b8-9c4a-5df86d84ac83",
+        "name": "Lot 7",
+        "description": "Well-lit secure parking.",
+        "location": "Zone G",
+        "date_created": "2025-06-12T07:37:50.097393Z",
+        "date_updated": "2025-06-12T07:37:50.097397Z"
+    },
+    {
+        "id": "107a78df-c03b-47fb-9402-f2cf487c3bfe",
+        "name": "Lot 8",
+        "description": "Well-lit secure parking.",
+        "location": "Zone H",
+        "date_created": "2025-06-12T07:37:50.097953Z",
+        "date_updated": "2025-06-12T07:37:50.097957Z"
+    },
+    {
+        "id": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0",
+        "name": "Lot 9",
+        "description": "Well-lit secure parking.",
+        "location": "Zone I",
+        "date_created": "2025-06-12T07:37:50.098456Z",
+        "date_updated": "2025-06-12T07:37:50.098459Z"
+    },
+    {
+        "id": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0",
+        "name": "Lot 10",
+        "description": "Well-lit secure parking.",
+        "location": "Zone J",
+        "date_created": "2025-06-12T07:37:50.098962Z",
+        "date_updated": "2025-06-12T07:37:50.098965Z"
+    },
+    {
+        "id": "4fe6ec11-f678-4717-89d4-67d231ea800e",
+        "name": "Postman location",
+        "description": "This was created using Postman",
+        "location": "Imaginary",
+        "date_created": "2025-06-15T07:21:55.056410Z",
+        "date_updated": "2025-06-15T07:21:55.056422Z"
+    },
+    {
+        "id": "64189284-e4e5-49c9-ae02-12715d09aec8",
+        "name": "Postman location",
+        "description": "This was created using Postman",
+        "location": "Imaginary",
+        "date_created": "2025-06-15T07:24:21.945925Z",
+        "date_updated": "2025-06-15T07:24:21.945936Z"
+    },
+    {
+        "id": "05e8c817-8e72-40cb-8d2a-32b2d15ac1e9",
+        "name": "Postman location",
+        "description": "This was created using Postman",
+        "location": "Imaginary",
+        "date_created": "2025-06-15T07:24:23.191385Z",
+        "date_updated": "2025-06-15T07:24:23.191395Z"
+    },
+    {
+        "id": "4d9e1162-1ebd-45f7-8f26-923a829a3081",
+        "name": "Postman location",
+        "description": "",
+        "location": "Imaginary",
+        "date_created": "2025-06-15T07:24:43.261948Z",
+        "date_updated": "2025-06-15T07:24:43.261959Z"
+    },
+    {
+        "id": "ecf8a757-18a8-442b-abb4-f733990734b2",
+        "name": "Postman location",
+        "description": "This was created using Postman",
+        "location": "Imaginary",
+        "date_created": "2025-06-15T07:24:46.156814Z",
+        "date_updated": "2025-06-15T07:24:46.156823Z"
+    }
+]

@@ -39,7 +39,7 @@ export default function HomePage() {
               <div className="flex gap-2 mt-auto">
                 <Link
                   className={buttonStyles({ color: "primary", radius: "full" })}
-                  href="/admin/locations"
+                  href="/locations"
                 >
                   Manage Locations
                 </Link>
@@ -48,7 +48,7 @@ export default function HomePage() {
                     variant: "bordered",
                     radius: "full",
                   })}
-                  href="/admin/users"
+                  href="/users"
                 >
                   Manage Users
                 </Link>
