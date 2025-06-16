@@ -65,7 +65,6 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
     <section className="flex flex-col items-center justify-center gap-8 py-10 md:py-16">
       <div className="inline-block max-w-2xl text-center justify-center">
         <h2 className="text-2xl font-bold mb-2">{lotData?.name}</h2>
-        <p className="text-gray-600 mb-1">Address: {lotData?.name}</p>
         <p className="text-gray-600 mb-1">
           Available Slots: {availableSlots}/{totalSlots}
         </p>

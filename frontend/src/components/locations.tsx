@@ -72,7 +72,13 @@ export const Locations: React.FC<LocationsProps> = ({
             </TableHeader>
             <TableBody>
               {items.map((loc) => (
-                <TableRow key={loc.id}>
+                <TableRow
+                  key={loc.id}
+                  className="cursor-pointer"
+                  onClick={() =>
+                    (window.location.href = `/locations/${loc.id}`)
+                  }
+                >
                   <TableCell>{loc.name}</TableCell>
                   <TableCell>{loc.description}</TableCell>
                   <TableCell>{loc.location}</TableCell>
