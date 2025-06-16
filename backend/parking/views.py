@@ -28,6 +28,15 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
         reservations = Reservation.objects.filter(parking_location=location)
         serializer = ReservationSerializer(reservations, many=True)
         return Response(serializer.data)
+    
+    @action(detail=False, methods=['get'], url_path='by_user')
+    def by_user(self, request):
+        user_id = request.query_params.get('user_id')
+        if not user_id:
+            return Response({"detail": "user_id is required"}, status=400)
+        locations = ParkingLocation.objects.filter(user_id=user_id)
+        serializer = self.get_serializer(locations, many=True)
+        return Response(serializer.data)
 
 class ParkingSlotViewSet(viewsets.ModelViewSet):
     queryset = ParkingSlot.objects.all()
@@ -53,3 +62,12 @@ class ReservationViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)  # Assuming the user is authenticated
+
+    @action(detail=False, methods=['get'], url_path='by_user')
+    def by_user(self, request):
+        user_id = request.query_params.get('user_id')
+        if not user_id:
+            return Response({"detail": "user_id is required"}, status=400)
+        reservations = Reservation.objects.filter(user_id=user_id)
+        serializer = self.get_serializer(reservations, many=True)
+        return Response(serializer.data)
