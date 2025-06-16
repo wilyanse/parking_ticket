@@ -92,7 +92,12 @@ class ReservationViewSet(viewsets.ModelViewSet):
     serializer_class = ReservationSerializer
 
     def perform_create(self, serializer):
-        serializer.save(user=self.request.user)  # Assuming the user is authenticated
+        reservation = serializer.save(user=self.request.user)  # Assuming the user is authenticated
+        # Set the status of the parking slot to 'reserved'
+        if reservation.parking_slot_id:
+            slot = ParkingSlot.objects.get(id=reservation.parking_slot_id)
+            slot.status = 'reserved'
+            slot.save()
 
     @action(detail=False, methods=['get'], url_path='by_user')
     def by_user(self, request):
