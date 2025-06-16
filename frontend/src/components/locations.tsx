@@ -9,17 +9,9 @@ import {
   Pagination,
 } from "@heroui/react";
 
-import locationsData from "../statics/locations.json";
-
-export interface Location {
-  id: string;
-  name: string;
-  description: string;
-  location: string;
-  date_created: string;
-  date_updated: string;
-}
-
+import locationsData from "@/statics/locations.json";
+import { Location } from "@/types/index.ts";
+import { DeleteIcon, EditIcon } from "./icons";
 export interface LocationsProps {
   title?: string;
   subtitle?: string;
@@ -30,7 +22,7 @@ export interface LocationsProps {
 export const Locations: React.FC<LocationsProps> = ({
   title = "Parking Locations",
   subtitle = "Manage your parking locations and reservations efficiently.",
-  isAdmin = false,
+  isAdmin = true,
   data = locationsData,
 }) => {
   const [page, setPage] = React.useState(1);
@@ -77,6 +69,7 @@ export const Locations: React.FC<LocationsProps> = ({
               <TableColumn>NAME</TableColumn>
               <TableColumn>DESCRIPTION</TableColumn>
               <TableColumn>LOCATION</TableColumn>
+                {/* <TableColumn>ACTIONS</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((loc) => (
@@ -84,6 +77,24 @@ export const Locations: React.FC<LocationsProps> = ({
                   <TableCell>{loc.name}</TableCell>
                   <TableCell>{loc.description}</TableCell>
                   <TableCell>{loc.location}</TableCell>
+                    {/* <TableCell>
+                    {isAdmin ? (
+                      <div className="flex gap-2">
+                      <button
+                        className="text-secondary-500 hover:underline"
+                        onClick={() => alert(`Edit ${loc}`)}
+                      >
+                        <EditIcon />
+                      </button>
+                      <button
+                        className="text-tertiary-500 hover:underline"
+                        onClick={() => alert(`Delete ${loc}`)}
+                      >
+                        <DeleteIcon />
+                      </button>
+                      </div>
+                    ) : null}
+                    </TableCell> */}
                 </TableRow>
               ))}
             </TableBody>

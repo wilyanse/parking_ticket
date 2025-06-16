@@ -1,4 +1,5 @@
 import * as React from "react";
+import { SVGProps } from "react";
 
 import { IconSvgProps } from "@/types";
 
@@ -184,3 +185,42 @@ export const SearchIcon = (props: IconSvgProps) => (
     />
   </svg>
 );
+
+export function EditIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      height="1.5em"
+      viewBox="0 0 14 14"
+      width="1.5em"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="m7.5 9l-3 .54L5 6.5L10.73.79a1 1 0 0 1 1.42 0l1.06 1.06a1 1 0 0 1 0 1.42Z" />
+        <path d="M12 9.5v3a1 1 0 0 1-1 1H1.5a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h3" />
+      </g>
+    </svg>
+  );
+}
+
+export function DeleteIcon(props: SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      height="1.5em"
+      viewBox="0 0 24 24"
+      width="1.5em"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <path
+        d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12l1.41 1.41L13.41 14l2.12 2.12l-1.41 1.41L12 15.41l-2.12 2.12l-1.41-1.41L10.59 14zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+        fill="currentColor"
+      />
+    </svg>
+  );
+}
