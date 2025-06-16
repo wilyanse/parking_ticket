@@ -1,9 +1,20 @@
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import DefaultLayout from "@/layouts/default";
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const userStr = localStorage.getItem("currentUser");
+
+    if (!userStr) {
+      navigate("/", { replace: true });
+    }
+  }, [navigate]);
   const userStr = localStorage.getItem("currentUser");
 
   const user = userStr ? JSON.parse(userStr) : null;
