@@ -2,7 +2,6 @@ import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 
 import DefaultLayout from "@/layouts/default";
-import { NavbarMenu } from "@heroui/navbar";
 
 export default function HomePage() {
   const userStr = localStorage.getItem("currentUser");

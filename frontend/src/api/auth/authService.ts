@@ -34,5 +34,6 @@ export const login = async ({ username, password }: LoginData) => {
 export const logout = () => {
   localStorage.removeItem("access");
   localStorage.removeItem("refresh");
-  window.location.href = "/blog";
+  localStorage.removeItem("currentUser");
+  window.location.href = "/";
 };
