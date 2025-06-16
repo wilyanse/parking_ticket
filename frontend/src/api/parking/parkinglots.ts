@@ -69,3 +69,11 @@ export async function deleteParkingSlot(locationId: string) {
 
   return response.data;
 }
+
+export async function getReservationsBySlotId(slotId: string) {
+  const response = await axiosInstance.get(
+    `${API_URL}/api/slots/${slotId}/reservations`,
+  );
+
+  return response.data;
+}

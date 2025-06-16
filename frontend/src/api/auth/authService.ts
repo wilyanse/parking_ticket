@@ -38,3 +38,19 @@ export const logout = () => {
   localStorage.removeItem("currentUser");
   window.location.href = "/";
 };
+
+interface RegisterData {
+  username: string;
+  password: string;
+  email: string;
+}
+
+export const register = async ({ username, password, email }: RegisterData) => {
+  const response = await axios.post(`${API_URL}/api/users/`, {
+    username,
+    password,
+    email,
+  });
+
+  return response.data;
+};

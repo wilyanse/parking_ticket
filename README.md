@@ -54,10 +54,10 @@ Specifically, a user can:
     - [ ] Frontend - Change details screen
 - [ ] View a list or visual representation of available parking locations.
     - [/] Backend - Obtain list of parking locations
-    - [ ] Frontend - Table to see parking locations
+    - [/] Frontend - Table to see parking locations
 - [ ] See real-time availability of parking slots of a location.
     - [/] Backend - get location details by ID
-    - [ ] Frontend - Screen for location details
+    - [/] Frontend - Screen for location details
 - [ ] Reserve a parking slot and receive confirmation.
     - [/] Backend - get details per parking slot
     - [ ] Backend - send confirmation response
