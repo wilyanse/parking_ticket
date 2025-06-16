@@ -11,6 +11,7 @@ import {
 
 import locationsData from "@/statics/locations.json";
 import { Location } from "@/types/index.ts";
+import ParkingLotAdd from "@/components/ParkingLotAdd.tsx";
 export interface LocationsProps {
   title?: string;
   subtitle?: string;
@@ -43,6 +44,7 @@ export const Locations: React.FC<LocationsProps> = ({
         <p className="text-lg text-gray-600 mb-4">{subtitle}</p>
       </div>
       <div className="flex flex-col gap-3 w-full">
+        <ParkingLotAdd />
         <div className="w-full overflow-x-auto">
           <Table
             aria-label="Locations table"
