@@ -89,7 +89,7 @@ export default function HomePage() {
           )}
           {/* User Section */}
           {!isAdmin && (
-            <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col">
+            <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col items-center text-center">
               <h2 className="text-xl font-semibold mb-2">User Portal</h2>
               <ul className="list-disc list-inside text-left text-gray-700 mb-4">
                 <li>

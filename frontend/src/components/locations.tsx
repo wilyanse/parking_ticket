@@ -45,9 +45,7 @@ export const Locations: React.FC<LocationsProps> = ({
       </div>
       <div className="flex flex-col gap-3 w-full">
         <div className="flex w-full justify-end mb-2">
-          <div className="w-auto">
-            <ParkingLotAdd />
-          </div>
+          <div className="w-auto">{isAdmin && <ParkingLotAdd />}</div>
         </div>
         <div className="w-full overflow-x-auto">
           <Table

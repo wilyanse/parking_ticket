@@ -1,36 +1,45 @@
 import type { Reservation } from "@/types";
 
-import { SetStateAction, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 import DefaultLayout from "@/layouts/default";
 import { Reservations } from "@/components/Reservations";
-import { getReservationsByOwner } from "@/api/parking/parkinglots"; // You should have this API function
+import {
+  getReservationsByOwner,
+  getReservationsByUser,
+} from "@/api/parking/parkinglots"; // Include both API functions
 
 export default function ReservationsPage() {
   const [reservations, setReservations] = useState<Reservation[] | null>(null);
 
-  useEffect(() => {
-    const userStr = localStorage.getItem("currentUser");
-    const user = userStr ? JSON.parse(userStr) : null;
-    const ownerId = user ? user.user_id : null;
-
-    if (user && user.is_staff === true && ownerId) {
-      getReservationsByOwner(ownerId).then(
-        (data: SetStateAction<Reservation[] | null>) => {
-          setReservations(data);
-        },
-      );
-    }
-  }, []);
-
   const userStr = localStorage.getItem("currentUser");
   const user = userStr ? JSON.parse(userStr) : null;
-  const isAdmin = user && user.is_staff === true;
+  const isAdmin = user?.is_staff === true;
+
+  useEffect(() => {
+    const fetchReservations = async () => {
+      if (!user) return;
+
+      try {
+        const data = isAdmin
+          ? await getReservationsByOwner() // Admin: see all owned
+          : await getReservationsByUser(); // User: see their own
+
+        setReservations(data);
+      } catch (error) {
+        console.error("Failed to fetch reservations:", error);
+      }
+    };
+
+    fetchReservations();
+  }, [isAdmin]);
 
   return (
     <DefaultLayout>
       {isAdmin && reservations && <Reservations data={reservations} />}
-      {!isAdmin}
+      {!isAdmin && reservations && (
+        <Reservations data={reservations} isAdmin={false} />
+      )}
     </DefaultLayout>
   );
 }

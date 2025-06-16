@@ -28,9 +28,10 @@ export async function getParkingLocationById(id: string) {
 
 export async function getParkingLocationsByUser() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
-  const userId = currentUser.user_id;
+  const user = currentUser.user_id;
+
   const response = await axiosInstance.get(
-    `${API_URL}/api/locations/by_user/?user_id=${userId}`,
+    `${API_URL}/api/locations/by_user/?user_id=${user}`,
   );
 
   return response.data;
@@ -88,9 +89,23 @@ export async function getReservationsBySlotId(slotId: string) {
   return response.data;
 }
 
-export async function getReservationsByOwner(ownerId: number) {
+export async function getReservationsByOwner() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const user = currentUser.user_id;
+
   const response = await axiosInstance.get(
-    `${API_URL}/api/reservations/by_owner/?owner_id=${ownerId}`,
+    `${API_URL}/api/reservations/by_owner/?owner_id=${user}`,
+  );
+
+  return response.data;
+}
+
+export async function getReservationsByUser() {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const user = currentUser.user_id;
+
+  const response = await axiosInstance.get(
+    `${API_URL}/api/reservations/by_user/?user_id=${user}`,
   );
 
   return response.data;
