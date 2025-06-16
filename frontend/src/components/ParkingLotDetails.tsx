@@ -106,6 +106,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
         </div>
         <div className="overflow-x-auto">
           <Table
+            isStriped
             aria-label="Slots table"
             bottomContent={
               <div className="flex justify-center">

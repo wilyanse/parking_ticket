@@ -47,6 +47,7 @@ export const Locations: React.FC<LocationsProps> = ({
         <ParkingLotAdd />
         <div className="w-full overflow-x-auto">
           <Table
+            isStriped
             aria-label="Locations table"
             bottomContent={
               <div className="flex w-full justify-center">
