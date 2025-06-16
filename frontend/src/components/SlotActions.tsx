@@ -44,7 +44,7 @@ export default function SlotActions({
   return (
     <div className="flex gap-2">
       <Button color="primary" isLoading={loading} onPress={handleCreateSlot}>
-        Create Slot
+        Add Slot
       </Button>
       <Button
         color="danger"
@@ -52,7 +52,7 @@ export default function SlotActions({
         variant="flat"
         onPress={handleDeleteSlot}
       >
-        Delete Slot
+        Subtract Slot
       </Button>
     </div>
   );

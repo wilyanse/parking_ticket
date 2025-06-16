@@ -23,4 +23,16 @@ class ReservationSerializer(serializers.ModelSerializer):
         if self.instance is None:
             if data['start_time'] >= data['end_time']:
                 raise serializers.ValidationError("Start time must be before end time.")
+
+            # Check for overlapping reservations for the same parking slot
+            slot = data['parking_slot']
+            start = data['start_time']
+            end = data['end_time']
+            overlapping = Reservation.objects.filter(
+                parking_slot=slot,
+                start_time__lt=end,
+                end_time__gt=start
+            ).exists()
+            if overlapping:
+                raise serializers.ValidationError("This parking slot is already reserved for the selected time range.")
         return data

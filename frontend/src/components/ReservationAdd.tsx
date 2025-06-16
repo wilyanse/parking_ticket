@@ -44,8 +44,16 @@ export default function ReservationAdd({
       setEndTime("");
       alert("Reservation created!");
       window.location.reload();
-    } catch {
-      alert("Failed to create reservation.");
+    } catch (error: any) {
+      if (error?.response?.non_field_errors) {
+        alert(error.response.non_field_errors.join("\n"));
+      } else if (error?.response) {
+        alert(JSON.stringify(error.response.data.non_field_errors));
+      } else if (error?.message) {
+        alert(error.message);
+      } else {
+        alert("Failed to create reservation.");
+      }
     }
   };
 

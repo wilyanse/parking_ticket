@@ -23,6 +23,18 @@ export const siteConfig = {
       href: "/profile",
     },
     {
+      label: "Settings",
+      href: "/settings",
+    },
+    {
+      label: "Parking Lots",
+      href: "/locations",
+    },
+    {
+      label: "Reservations",
+      href: "/reservations",
+    },
+    {
       label: "Logout",
       href: "/logout",
     },
