@@ -1,0 +1,58 @@
+[
+    {
+        "id": 3,
+        "username": "user2",
+        "email": "user2@example.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 4,
+        "username": "user3",
+        "email": "user3@example.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 5,
+        "username": "user4",
+        "email": "user4@example.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 6,
+        "username": "user5",
+        "email": "user5@example.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 7,
+        "username": "tes2tin2g",
+        "email": "test@gmail.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 8,
+        "username": "test",
+        "email": "test@mail.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 2,
+        "username": "user1",
+        "email": "user1@example.com",
+        "is_active": true,
+        "is_staff": false
+    },
+    {
+        "id": 1,
+        "username": "admin",
+        "email": "admin@example.com",
+        "is_active": true,
+        "is_staff": true
+    }
+]

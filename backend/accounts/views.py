@@ -20,8 +20,13 @@ class IsAdminOrSelf(permissions.BasePermission):
         return obj == request.user
 
 class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
     serializer_class = UserSerializer
+
+    def get_queryset(self):
+        # Only non-admin users for list, all users for retrieve/update/etc.
+        if self.action == 'list':
+            return User.objects.filter(is_staff=False)
+        return User.objects.all()
 
     def get_permissions(self):
         if self.action == 'create':
@@ -33,7 +38,6 @@ class UserViewSet(viewsets.ModelViewSet):
         else:
             return super().get_permissions()
 
-    
     @action(detail=True, methods=["patch"], permission_classes=[permissions.IsAdminUser])
     def reactivate(self, request, pk=None):
         user = self.get_object()
