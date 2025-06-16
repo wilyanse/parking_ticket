@@ -1,7 +1,8 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
-const BASE_URL = "http://localhost:8000/api";
+// const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "http://localhost:8000";
 
 let accessToken = localStorage.getItem("access");
 let refreshToken = localStorage.getItem("refresh");
@@ -12,7 +13,7 @@ interface JwtPayload {
 }
 
 const axiosInstance = axios.create({
-  baseURL: BASE_URL,
+  baseURL: API_URL,
   headers: {
     "Content-Type": "application/json",
     Authorization: accessToken ? `Bearer ${accessToken}` : "",
@@ -27,7 +28,7 @@ axiosInstance.interceptors.request.use(
 
       if (decoded.exp < now) {
         try {
-          const response = await axios.post(`${BASE_URL}token/refresh/`, {
+          const response = await axios.post(`${API_URL}/api/token/refresh/`, {
             refresh: refreshToken,
           });
 

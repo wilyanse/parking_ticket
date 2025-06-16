@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:8000/api";
+// const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = "http://localhost:8000";
 
 interface LoginData {
   username: string;
@@ -8,7 +9,7 @@ interface LoginData {
 }
 
 export const login = async ({ username, password }: LoginData) => {
-  const response = await axios.post(`${API_URL}/login/`, {
+  const response = await axios.post(`${API_URL}/api/login/`, {
     username,
     password,
   });
