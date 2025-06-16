@@ -20,7 +20,7 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 from rest_framework.routers import DefaultRouter
 from parking.views import ParkingLocationViewSet, ParkingSlotViewSet, ReservationViewSet
-from accounts.views import UserViewSet
+from accounts.views import UserViewSet, CustomTokenObtainPairView
 
 router = DefaultRouter()
 router.register(r'locations', ParkingLocationViewSet, basename='parkinglocation')
@@ -35,4 +35,5 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
     path('api/', include(router.urls)),
+    path('api/login/', CustomTokenObtainPairView.as_view(), name="token_obtain_pair")
 ]
