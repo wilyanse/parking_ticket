@@ -1,3 +1,14 @@
+import React from "react";
+import {
+  Table,
+  TableHeader,
+  TableColumn,
+  TableBody,
+  TableRow,
+  TableCell,
+  Pagination,
+} from "@heroui/react";
+
 import locationsData from "../statics/locations.json";
 
 export interface Location {
@@ -17,50 +28,67 @@ export interface LocationsProps {
 }
 
 export const Locations: React.FC<LocationsProps> = ({
-  title = "Parking Ticket Locations",
+  title = "Parking Locations",
   subtitle = "Manage your parking locations and reservations efficiently.",
   isAdmin = false,
-  data = locationsData
+  data = locationsData,
 }) => {
+  const [page, setPage] = React.useState(1);
+  const rowsPerPage = 5;
+
+  const pages = Math.ceil(data.length / rowsPerPage);
+
+  const items = React.useMemo(() => {
+    const start = (page - 1) * rowsPerPage;
+    const end = start + rowsPerPage;
+
+    return data.slice(start, end);
+  }, [page, data]);
+
   return (
     <section className="flex flex-col items-center justify-center gap-8 py-10 md:py-16">
       <div className="inline-block max-w-2xl text-center justify-center">
         <h1 className="text-4xl font-bold mb-2">{title}</h1>
         <p className="text-lg text-gray-600 mb-4">{subtitle}</p>
       </div>
-
-
-      <div className="w-full max-w-4xl overflow-x-auto">
-        <table className="min-w-full bg-white border border-gray-200 rounded shadow">
-          <thead>
-            <tr>
-              <th className="px-4 py-2 border-b">Name</th>
-              <th className="px-4 py-2 border-b">Description</th>
-              <th className="px-4 py-2 border-b">Location</th>
-              <th className="px-4 py-2 border-b">Created</th>
-              <th className="px-4 py-2 border-b">Updated</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.length === 0 ? (
-              <tr>
-                <td colSpan={5} className="text-center py-4 text-gray-400">
-                  No locations found.
-                </td>
-              </tr>
-            ) : (
-              data.map((loc) => (
-                <tr key={loc.id}>
-                  <td className="px-4 py-2 border-b">{loc.name}</td>
-                  <td className="px-4 py-2 border-b">{loc.description}</td>
-                  <td className="px-4 py-2 border-b">{loc.location}</td>
-                  <td className="px-4 py-2 border-b">{new Date(loc.date_created).toLocaleString()}</td>
-                  <td className="px-4 py-2 border-b">{new Date(loc.date_updated).toLocaleString()}</td>
-                </tr>
-              ))
-            )}
-          </tbody>
-        </table>
+      <div className="flex flex-col gap-3 w-full">
+        <div className="w-full overflow-x-auto">
+          <Table
+            aria-label="Locations table"
+            bottomContent={
+              <div className="flex w-full justify-center">
+                <Pagination
+                  isCompact
+                  showControls
+                  showShadow
+                  color="secondary"
+                  page={page}
+                  total={pages}
+                  onChange={(page) => setPage(page)}
+                />
+              </div>
+            }
+            classNames={{
+              wrapper: "min-h-[222px]",
+            }}
+            selectionMode="single"
+          >
+            <TableHeader>
+              <TableColumn>NAME</TableColumn>
+              <TableColumn>DESCRIPTION</TableColumn>
+              <TableColumn>LOCATION</TableColumn>
+            </TableHeader>
+            <TableBody>
+              {items.map((loc) => (
+                <TableRow key={loc.id}>
+                  <TableCell>{loc.name}</TableCell>
+                  <TableCell>{loc.description}</TableCell>
+                  <TableCell>{loc.location}</TableCell>
+                </TableRow>
+              ))}
+            </TableBody>
+          </Table>
+        </div>
       </div>
     </section>
   );
