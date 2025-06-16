@@ -89,3 +89,21 @@ class ReservationViewSet(viewsets.ModelViewSet):
         reservations = Reservation.objects.filter(user_id=user_id)
         serializer = self.get_serializer(reservations, many=True)
         return Response(serializer.data)
+    
+    @action(detail=False, methods=['get'], url_path='by_owner')
+    def by_owner(self, request):
+        """
+        Returns all reservations for locations owned by a specific user.
+        Usage: /api/reservations/by_owner/?owner_id=USER_ID
+        """
+        owner_id = request.query_params.get('owner_id')
+        if not owner_id:
+            return Response({"detail": "owner_id is required"}, status=400)
+        reservations = Reservation.objects.filter(parking_location__user_id=owner_id)
+        data = []
+        for reservation in reservations:
+            serialized = self.get_serializer(reservation).data
+            serialized['parking_location'] = reservation.parking_location.name
+            serialized['username'] = reservation.user.username if reservation.user else None
+            data.append(serialized)
+        return Response(data)

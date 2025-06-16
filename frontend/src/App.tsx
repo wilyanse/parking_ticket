@@ -1,5 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 
+import ReservationsPage from "./pages/ReservationsPage";
+
 import HomePage from "@/pages/home";
 import IndexPage from "@/pages/index";
 import LoginPage from "@/pages/login";
@@ -21,6 +23,7 @@ function App() {
       <Route element={<LocationsPage />} path="/locations" />
       <Route element={<HomePage />} path="/dashboard" />
       <Route element={<ParkingLotsPage />} path="/locations/:lotId" />
+      <Route element={<ReservationsPage />} path="/reservations" />
       {/* <Route element={<DocsPage />} path="/docs" />
       <Route element={<PricingPage />} path="/pricing" />
       <Route element={<BlogPage />} path="/blog" />

@@ -77,3 +77,20 @@ export async function getReservationsBySlotId(slotId: string) {
 
   return response.data;
 }
+
+export async function getReservationsByOwner(ownerId: number) {
+  const response = await axiosInstance.get(
+    `${API_URL}/api/reservations/by_owner/?owner_id=${ownerId}`,
+  );
+
+  return response.data;
+}
+
+export async function cancelReservationStatus(reservationId: string) {
+  const response = await axiosInstance.patch(
+    `${API_URL}/api/reservations/${reservationId}/`,
+    { status: "cancelled" },
+  );
+
+  return response.data;
+}
