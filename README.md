@@ -12,7 +12,7 @@ Specifically, an admin can:
 - [ ] Log in securely to access the admin dashboard.
     - [/] Backend - API call to login
     - [/] Backend - Limit views based on group/permissions
-    - [ ] Frontend - Admin dashboard
+    - [/] Frontend - Admin dashboard
 - [/] Add, update, or delete parking locations
     - [/] Backend - API call to add
     - [/] Backend - API call to update

@@ -33,3 +33,9 @@ export interface Reservation {
   parking_slot: string;
   username: string;
 }
+
+export interface User {
+  username?: string;
+  email?: string;
+  password?: string;
+}

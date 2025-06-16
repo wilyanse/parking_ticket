@@ -1,5 +1,8 @@
 import axios from "axios";
 
+import axiosInstance from "@/api/axios";
+import { User } from "@/types";
+
 // const API_URL = import.meta.env.VITE_API_URL;
 const API_URL = "http://localhost:8000";
 
@@ -51,6 +54,43 @@ export const register = async ({ username, password, email }: RegisterData) => {
     password,
     email,
   });
+
+  return response.data;
+};
+
+export const updateUser = async (userId: number, data: User) => {
+  const response = await axiosInstance.patch(
+    `${API_URL}/api/users/${userId}/`,
+    data,
+  );
+
+  if (data.username) {
+    const currentUser = localStorage.getItem("currentUser");
+
+    if (currentUser) {
+      const updatedUser = { ...JSON.parse(currentUser), ...data };
+
+      localStorage.setItem("currentUser", JSON.stringify(updatedUser));
+    }
+  }
+
+  return response.data;
+};
+
+export const disableUser = async (userId: number) => {
+  const response = await axiosInstance.patch(
+    `${API_URL}/api/users/${userId}/`,
+    { is_active: false },
+  );
+
+  return response.data;
+};
+
+export const enableUser = async (userId: number) => {
+  const response = await axiosInstance.patch(
+    `${API_URL}/api/users/${userId}/`,
+    { is_active: true },
+  );
 
   return response.data;
 };

@@ -40,7 +40,7 @@ def run():
             }
         )
         if created:
-            user.set_password("user12345")
+            user.set_password("$fake$hash$pass")
             user.save()
         users.append(user)
 
