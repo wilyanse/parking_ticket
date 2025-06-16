@@ -69,6 +69,19 @@ class ParkingSlotViewSet(viewsets.ModelViewSet):
     
     @action(detail=True, methods=['get'])
     def reservations(self, request, pk=None):
+        """
+        Retrieve all reservations for a specific parking slot.
+        This view returns a list of reservations associated with the parking slot identified by the provided primary key (pk).
+        The reservations are serialized and returned as a JSON response.
+        Args:
+            request (Request): The HTTP request object.
+            pk (int, optional): The primary key of the parking slot.
+        Returns:
+            Response: A Response object containing serialized reservation data.
+        API Usage:
+            GET /api/parking-slots/{pk}/reservations/
+            Replace `{pk}` with the ID of the parking slot to retrieve its reservations.
+        """
         slot = self.get_object()
         reservations = slot.reservations.all()
         serializer = ReservationSerializer(reservations, many=True)

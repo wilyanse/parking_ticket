@@ -25,12 +25,12 @@ Specifically, an admin can:
     - [/] Backend - API call to check number of slots available per parking location
     - [/] Frontend - Table for parking locations
     - [/] Frontend - Individual parking location screen
-- [ ] View a list of current and upcoming reservations
+- [/] View a list of current and upcoming reservations
     - [/] Backend - API call to see list of reservations
-    - [ ] Frontend - Table for reservations
-- [ ] Cancel user reservations if necessary
+    - [/] Frontend - Table for reservations
+- [/] Cancel user reservations if necessary
     - [/] Backend - API call to modify reservation status
-    - [ ] Frontend - Screen to cancel reservation
+    - [/] Frontend - Screen to cancel reservation
 - [ ] View a summary of parking activity (e.g., total reservations per day).
     - [/] Backend - API call by date range to see statistics
     - [ ] Frontend - Data dashboard of parking activities
@@ -62,13 +62,13 @@ Specifically, a user can:
     - [/] Backend - get details per parking slot
     - [ ] Backend - send confirmation response
     - [ ] Backend - send details to email
-    - [ ] Frontend - screen for parking slot reservation
+    - [/] Frontend - screen for parking slot reservation
 - [ ] View active and past reservations.
     - [/] Backend - list reservations by user ID
-    - [ ] Frontend - table for reservations by user ID
+    - [/] Frontend - table for reservations by user ID
 - [ ] Cancel a reservation before the start time.
     - [/] Backend - modify reservation status
-    - [ ] Frontend - View reservation details by reservation ID
+    - [/] Frontend - View reservation details by reservation ID
 - [ ] Receive alerts for reservation expiration or cancellation.
     - [ ] Backend - send email
     - [ ] Backend - popup for user

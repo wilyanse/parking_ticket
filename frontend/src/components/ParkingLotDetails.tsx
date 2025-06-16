@@ -19,6 +19,7 @@ import locationsData from "@/statics/locations.json";
 import { Location, Slot } from "@/types/index.ts";
 import ParkingLotEdit from "@/components/ParkingLotEdit.tsx";
 import SlotActions from "@/components/SlotActions";
+import ReservationAdd from "@/components/ReservationAdd.tsx";
 export interface ParkingLotDetailsProps {
   isAdmin?: boolean;
   data?: Slot[];
@@ -149,6 +150,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
             <TableHeader>
               <TableColumn className="text-center">ID</TableColumn>
               <TableColumn className="text-center">STATUS</TableColumn>
+              <TableColumn className="text-center">RESERVATION</TableColumn>
             </TableHeader>
             <TableBody>
               {items.map((slot, idx) => (
@@ -157,6 +159,12 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
                     {(page - 1) * rowsPerPage + idx + 1}
                   </TableCell>
                   <TableCell className="text-center">{slot.status}</TableCell>
+                  <TableCell className="text-center">
+                    <ReservationAdd
+                      parkingLocation={lotData.id}
+                      parkingSlot={slot.id}
+                    />
+                  </TableCell>
                 </TableRow>
               ))}
             </TableBody>

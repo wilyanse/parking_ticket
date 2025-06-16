@@ -94,3 +94,20 @@ export async function cancelReservationStatus(reservationId: string) {
 
   return response.data;
 }
+
+export async function createReservation(data: {
+  start_time: string;
+  end_time: string;
+  parking_location: string;
+  parking_slot: string;
+}) {
+  const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
+  const user = currentUser.user_id;
+
+  const response = await axiosInstance.post(`${API_URL}/api/reservations/`, {
+    ...data,
+    user,
+  });
+
+  return response.data;
+}
