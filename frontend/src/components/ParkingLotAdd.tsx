@@ -22,7 +22,7 @@ export default function App() {
   return (
     <>
       <Button color="primary" onPress={onOpen}>
-        Open Modal
+        Add Parking Lot
       </Button>
       <Modal isOpen={isOpen} placement="top-center" onOpenChange={onOpenChange}>
         <ModalContent>
