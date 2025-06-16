@@ -1,0 +1,1402 @@
+[
+    {
+        "id": "93f4be46-2da6-4616-b880-0e2e97dc2614",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.721380Z",
+        "date_updated": "2025-06-12T07:23:08.721387Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "9cd798a5-8b8d-4b93-ac5e-84f75ecbf129",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.722132Z",
+        "date_updated": "2025-06-12T07:23:08.722149Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "268c813d-afb0-4926-8a0d-d5b280bfd744",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.723059Z",
+        "date_updated": "2025-06-12T07:23:08.723064Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "25d06eac-e144-4895-abb5-1ec2c8e2f286",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.723592Z",
+        "date_updated": "2025-06-12T07:23:08.723596Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "17329d7e-0d12-4e7b-ac61-d7657b1300ab",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.724117Z",
+        "date_updated": "2025-06-12T07:23:08.724121Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "0f98ddfc-cd51-4017-ab56-0fd60ff0d16e",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.724586Z",
+        "date_updated": "2025-06-12T07:23:08.724590Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "d7e6a53b-d22b-447d-9cfe-b0bfb53db107",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.725036Z",
+        "date_updated": "2025-06-12T07:23:08.725040Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "34889f95-10f5-4870-bbf1-b07e9e59309c",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.725492Z",
+        "date_updated": "2025-06-12T07:23:08.725495Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "dc2f2f14-bd9b-4fe7-b247-11bee089d8d2",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.725940Z",
+        "date_updated": "2025-06-12T07:23:08.725944Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "39aeec47-c2d7-436a-8b76-0ec2564f4689",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.726397Z",
+        "date_updated": "2025-06-12T07:23:08.726401Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "e287b2f8-889c-4444-8ce3-439c867185a1",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.726843Z",
+        "date_updated": "2025-06-12T07:23:08.726847Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "7315a3b5-aaeb-415d-8630-9cd2f2dd95c9",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.727301Z",
+        "date_updated": "2025-06-12T07:23:08.727305Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "34fb7a80-bfc9-428b-8bf3-a6782d140787",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.727717Z",
+        "date_updated": "2025-06-12T07:23:08.727720Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "b12b9b83-08e1-420b-8579-ed92689a4334",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.728179Z",
+        "date_updated": "2025-06-12T07:23:08.728183Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "32c7ef5e-41e9-40ad-808a-68c453ad464d",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.728597Z",
+        "date_updated": "2025-06-12T07:23:08.728601Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "2d55bae0-0a75-4f29-b146-f576ef52d537",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.729386Z",
+        "date_updated": "2025-06-12T07:23:08.729389Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "20851188-ab2d-4f71-9955-114e77e9ae79",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.729919Z",
+        "date_updated": "2025-06-12T07:23:08.729924Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "0076d5f5-abeb-4b73-bdcd-aa71f3cac7ee",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.730382Z",
+        "date_updated": "2025-06-12T07:23:08.730385Z",
+        "parking_location": "bc34d0de-0f62-44ec-b857-67ef6692ccbe"
+    },
+    {
+        "id": "75a246d7-d904-491f-ba7f-0ad939f828b3",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.730831Z",
+        "date_updated": "2025-06-12T07:23:08.730835Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "6d886543-8b68-4603-a7fb-571019755ae9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.731328Z",
+        "date_updated": "2025-06-12T07:23:08.731332Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "bc620209-c182-4994-9511-74373788dd60",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.731902Z",
+        "date_updated": "2025-06-12T07:23:08.731905Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "a18994a7-0c32-499a-a9d1-f1376731f8ae",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.732351Z",
+        "date_updated": "2025-06-12T07:23:08.732355Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "510172f6-fbcf-4e29-9b27-6f3e1d80f240",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.732776Z",
+        "date_updated": "2025-06-12T07:23:08.732780Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "a0068c26-3099-4dde-aa6d-26391ceaef6c",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.733205Z",
+        "date_updated": "2025-06-12T07:23:08.733209Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "314782b2-446a-47fa-9ea0-6b804ac796b2",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.733635Z",
+        "date_updated": "2025-06-12T07:23:08.733639Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "fee5ce12-0b13-4d61-b5cc-45630d27df1c",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.734062Z",
+        "date_updated": "2025-06-12T07:23:08.734066Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "6622375b-26ef-4095-80db-6ca32c3169a6",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.734491Z",
+        "date_updated": "2025-06-12T07:23:08.734496Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "2e0879f7-45da-48b0-8006-56b6ce4a6625",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.734924Z",
+        "date_updated": "2025-06-12T07:23:08.734928Z",
+        "parking_location": "fd83f9d1-c5ec-43d9-9426-dfd34f2538e0"
+    },
+    {
+        "id": "442c061e-8b7e-4bab-930a-03f21ad14793",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.735349Z",
+        "date_updated": "2025-06-12T07:23:08.735353Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "a9776e8e-645e-41b2-9ae3-fcd58c23e04f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.735774Z",
+        "date_updated": "2025-06-12T07:23:08.735777Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "c37c220b-6279-444b-9256-44101a347cb1",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.736223Z",
+        "date_updated": "2025-06-12T07:23:08.736227Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "3248b135-5bd9-432b-83b1-c4250a6de2fe",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.736646Z",
+        "date_updated": "2025-06-12T07:23:08.736649Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "fb8237d5-a8c9-452d-891b-6aac7ad30659",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.737064Z",
+        "date_updated": "2025-06-12T07:23:08.737068Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "562108b0-c2b0-4cb4-836e-27a3817973ca",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.737495Z",
+        "date_updated": "2025-06-12T07:23:08.737500Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "8bfa608b-c669-4219-930d-fd4de589a15b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.737938Z",
+        "date_updated": "2025-06-12T07:23:08.737941Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "8c50823c-44bd-4cbc-9ca6-d8d81c44af67",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.738356Z",
+        "date_updated": "2025-06-12T07:23:08.738360Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "d0bc9c7b-a5ad-42d8-9b1a-7bdf76534361",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.738782Z",
+        "date_updated": "2025-06-12T07:23:08.738785Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "c2003773-898d-4453-b461-d0ac6f8976e4",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.739206Z",
+        "date_updated": "2025-06-12T07:23:08.739210Z",
+        "parking_location": "f5767958-c65e-4893-8411-c84f734142b1"
+    },
+    {
+        "id": "9eeadd96-b043-43a6-863d-fc3b9de7eb42",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.739630Z",
+        "date_updated": "2025-06-12T07:23:08.739634Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "035767aa-b317-43a4-8462-28d1efb1e3b5",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.740057Z",
+        "date_updated": "2025-06-12T07:23:08.740061Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "a9abd53d-f03e-4db6-80ad-da93154e0a0f",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.740488Z",
+        "date_updated": "2025-06-12T07:23:08.740493Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "f107df6d-24da-4c1e-9f6e-c5446b162fe2",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.740916Z",
+        "date_updated": "2025-06-12T07:23:08.740919Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "e9938bbf-418f-4252-9e6e-0c2511a6f734",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.741337Z",
+        "date_updated": "2025-06-12T07:23:08.741341Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "950eb6e1-144e-475e-930b-531cf70053e0",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.741754Z",
+        "date_updated": "2025-06-12T07:23:08.741758Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "bbd1e569-34b3-4762-b0c3-9923af0a8510",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.742224Z",
+        "date_updated": "2025-06-12T07:23:08.742228Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "5ad321a3-82ab-470f-942c-6f4645732e4f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.742722Z",
+        "date_updated": "2025-06-12T07:23:08.742726Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "8619d999-8a6a-47d4-85ef-70761c735b0d",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.743181Z",
+        "date_updated": "2025-06-12T07:23:08.743185Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "138ae765-56fa-4e4a-bbcb-54a519a65694",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.743613Z",
+        "date_updated": "2025-06-12T07:23:08.743617Z",
+        "parking_location": "53ada10f-f683-4b12-9f51-112b8a8cfedf"
+    },
+    {
+        "id": "7e64f58a-8283-4cae-8173-f82e26ded462",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.744047Z",
+        "date_updated": "2025-06-12T07:23:08.744050Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "edcf1b61-f189-456f-96e5-1aa48be90e0b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.744467Z",
+        "date_updated": "2025-06-12T07:23:08.744470Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "deaebc28-84d3-47e9-8564-3b3736ada18f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.744896Z",
+        "date_updated": "2025-06-12T07:23:08.744899Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "d0c027bd-49ae-4ae8-97f6-d70e37179745",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.745316Z",
+        "date_updated": "2025-06-12T07:23:08.745319Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "1a44b070-dab9-4076-9d10-0beb623f3d14",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.745734Z",
+        "date_updated": "2025-06-12T07:23:08.745737Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "e55b906c-242f-4980-861c-ea5a7991af5c",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.746163Z",
+        "date_updated": "2025-06-12T07:23:08.746167Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "6d47fb40-df74-4c69-a6ac-51261593a951",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.746609Z",
+        "date_updated": "2025-06-12T07:23:08.746612Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "2bf35d3d-2c8d-421d-a920-3ba94f40ef13",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.747062Z",
+        "date_updated": "2025-06-12T07:23:08.747066Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "432a51f9-cd6d-4dee-a677-430e14a5d8e7",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.747575Z",
+        "date_updated": "2025-06-12T07:23:08.747580Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "e96d309f-c57b-47c5-866d-56ac73e4f616",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.748064Z",
+        "date_updated": "2025-06-12T07:23:08.748068Z",
+        "parking_location": "788f712e-699b-41f9-827e-c9247866fa44"
+    },
+    {
+        "id": "b9011dac-990d-4b79-8e75-ed3223f399a0",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.748507Z",
+        "date_updated": "2025-06-12T07:23:08.748511Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "5a456b2e-1ca9-43dd-b5d7-f5710582ce44",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.748936Z",
+        "date_updated": "2025-06-12T07:23:08.748940Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "56b0a7b7-890e-4bc3-a5ed-7656a8d0dc88",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.749340Z",
+        "date_updated": "2025-06-12T07:23:08.749343Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "0544298a-b54c-4fa9-8ad6-55facdf3c69c",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.749744Z",
+        "date_updated": "2025-06-12T07:23:08.749747Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "e73b361b-6ef0-476b-b1f9-ebe1ad18dab9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.750154Z",
+        "date_updated": "2025-06-12T07:23:08.750157Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "638bea99-6d27-4005-bf5d-0c7702a5c0c0",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.750578Z",
+        "date_updated": "2025-06-12T07:23:08.750581Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "8b1ddae4-7df0-4dcf-b4d4-cecf6e2cb824",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.750997Z",
+        "date_updated": "2025-06-12T07:23:08.751000Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "95dd6a49-2c46-43fd-811c-63db0de782ef",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.751412Z",
+        "date_updated": "2025-06-12T07:23:08.751415Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "c689a73b-f41d-4966-8d86-41911551c355",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.751949Z",
+        "date_updated": "2025-06-12T07:23:08.751955Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "1fe388dd-2aca-4db8-b7ff-eeed6ba9fae4",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.752532Z",
+        "date_updated": "2025-06-12T07:23:08.752538Z",
+        "parking_location": "b0454146-dd98-40cc-a73f-81aa498afae3"
+    },
+    {
+        "id": "d5d862be-c4bf-445a-8264-6dbf5ae4cac8",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.753074Z",
+        "date_updated": "2025-06-12T07:23:08.753079Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "81ba231a-a10f-40a5-bcdc-31af78e2475b",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.753595Z",
+        "date_updated": "2025-06-12T07:23:08.753600Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "c6ced6b8-8edd-480c-92e9-38a4d0ff5213",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.754086Z",
+        "date_updated": "2025-06-12T07:23:08.754090Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "fd54c0aa-46df-4434-b872-a63d3717ea58",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.754624Z",
+        "date_updated": "2025-06-12T07:23:08.754631Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "72e1a509-8dd2-4c92-ace3-b1e918f75b6b",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.755164Z",
+        "date_updated": "2025-06-12T07:23:08.755168Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "0850cc1b-3f17-494c-99d6-da68c836fb50",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.755729Z",
+        "date_updated": "2025-06-12T07:23:08.755734Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "47a4f08d-91ed-4bde-bcb2-757def7c638a",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.756249Z",
+        "date_updated": "2025-06-12T07:23:08.756253Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "9cbbe44a-5893-40b2-9844-f12d7d519a82",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.756717Z",
+        "date_updated": "2025-06-12T07:23:08.756721Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "2e34905c-11cd-4d40-95c9-005ec9483057",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.757177Z",
+        "date_updated": "2025-06-12T07:23:08.757180Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "45120bdc-e569-40be-9f94-c34f61f0547c",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.757630Z",
+        "date_updated": "2025-06-12T07:23:08.757634Z",
+        "parking_location": "09ba30be-d12e-4116-b3f8-ad37717111f0"
+    },
+    {
+        "id": "a573c45a-b532-4c98-b6ea-f8aa713c583d",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.758087Z",
+        "date_updated": "2025-06-12T07:23:08.758091Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "2ab31848-7a7a-45be-9d33-3f4f70e8d3eb",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.758536Z",
+        "date_updated": "2025-06-12T07:23:08.758539Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "defc231a-2f90-4358-a316-659de2bac461",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.758978Z",
+        "date_updated": "2025-06-12T07:23:08.758981Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "47357d8f-05f0-47b7-9083-3343feb02646",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.759429Z",
+        "date_updated": "2025-06-12T07:23:08.759433Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "e43a77a6-2fa3-4094-909c-811679ca037d",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.759862Z",
+        "date_updated": "2025-06-12T07:23:08.759865Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "b1412992-d0d0-4c72-a9aa-0c596d1accec",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.760305Z",
+        "date_updated": "2025-06-12T07:23:08.760309Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "6106fef3-881c-4987-bbcb-0efcf7b986a7",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.760739Z",
+        "date_updated": "2025-06-12T07:23:08.760743Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "d0a1b3eb-9c5e-405a-bd9d-bcfecd342b0b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.761198Z",
+        "date_updated": "2025-06-12T07:23:08.761201Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "ceeb3a14-ffd0-4703-b644-df7791353d46",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.720665Z",
+        "date_updated": "2025-06-15T13:29:37.055340Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    },
+    {
+        "id": "e0a461a4-3bf0-4621-9fa7-9ab7d2230ffd",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.761650Z",
+        "date_updated": "2025-06-12T07:23:08.761654Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "8a589fe2-c28e-4dbb-8c9d-b97b9e738d96",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.762212Z",
+        "date_updated": "2025-06-12T07:23:08.762216Z",
+        "parking_location": "12b81fd9-568c-4f6e-b6bc-15cebbe87fac"
+    },
+    {
+        "id": "0bb4c667-466c-40e5-afb9-ad9044eeedb5",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.762664Z",
+        "date_updated": "2025-06-12T07:23:08.762668Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "2bc2271b-10fd-4eff-a1ff-549727e046a2",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.763114Z",
+        "date_updated": "2025-06-12T07:23:08.763117Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "bb294414-515b-4325-80fe-2e12115995e7",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.763609Z",
+        "date_updated": "2025-06-12T07:23:08.763612Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "541f1cd3-4e70-4ad0-8806-78f61f35f0e3",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.764042Z",
+        "date_updated": "2025-06-12T07:23:08.764046Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "3813e957-965f-4bba-96c6-9f038e75f86a",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.764508Z",
+        "date_updated": "2025-06-12T07:23:08.764511Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "0377359b-7183-4b14-a9b7-c2ec57f439f6",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.764960Z",
+        "date_updated": "2025-06-12T07:23:08.764963Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "378c0a09-8c06-4f23-9190-0110e2c47ee3",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.765395Z",
+        "date_updated": "2025-06-12T07:23:08.765398Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "ded27bd6-395a-470c-9283-b4cb725a14f9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.765987Z",
+        "date_updated": "2025-06-12T07:23:08.765991Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "661343af-15dc-4b47-9308-fd93fe586704",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.766445Z",
+        "date_updated": "2025-06-12T07:23:08.766448Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "85fbec92-a43d-4f43-b504-dcdb851b6557",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:23:08.766913Z",
+        "date_updated": "2025-06-12T07:23:08.766916Z",
+        "parking_location": "8b5418df-84b6-436a-a148-10b606dd614f"
+    },
+    {
+        "id": "851fbaa6-e9cb-4186-8a99-3619ff70beb1",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.099586Z",
+        "date_updated": "2025-06-12T07:37:50.099591Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "94d1bf38-e1b2-408e-8262-de7c36549af9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.100442Z",
+        "date_updated": "2025-06-12T07:37:50.100446Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "db7444a6-0298-4c99-93f7-6508f92dfe0f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.100974Z",
+        "date_updated": "2025-06-12T07:37:50.100978Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "b0cdac2f-e1f2-4ab9-9f54-fc1115768c67",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.101522Z",
+        "date_updated": "2025-06-12T07:37:50.101526Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "49dbe265-a09e-47ce-8482-d902c019ef62",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.102233Z",
+        "date_updated": "2025-06-12T07:37:50.102239Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "fdab13d0-5a43-471d-9a45-6d14fe2fb835",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.102958Z",
+        "date_updated": "2025-06-12T07:37:50.102962Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "94f44321-71c6-4110-bb73-b60e4640eb73",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.103625Z",
+        "date_updated": "2025-06-12T07:37:50.103629Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "b369bf64-0cda-48ce-b70e-ddd099c3c636",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.104140Z",
+        "date_updated": "2025-06-12T07:37:50.104144Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "9191425f-3876-485c-b4d6-3033afe0aba4",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.104630Z",
+        "date_updated": "2025-06-12T07:37:50.104633Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "c79fbf1b-6961-45fd-90cf-bf10451e8913",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.105142Z",
+        "date_updated": "2025-06-12T07:37:50.105146Z",
+        "parking_location": "cdd9d41e-7d18-4c72-959f-0b7f00cfcf6e"
+    },
+    {
+        "id": "85e0e0d7-ac7c-4ddc-91c5-6c134ba21d0e",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.105592Z",
+        "date_updated": "2025-06-12T07:37:50.105596Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "2533914a-f271-4c6a-934c-7520d6cc78fc",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.106058Z",
+        "date_updated": "2025-06-12T07:37:50.106062Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "dd77c8e2-acaf-44e5-a795-c1779cc26fcb",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.106577Z",
+        "date_updated": "2025-06-12T07:37:50.106580Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "ae03f458-3cd2-40dd-90a4-b784b115df5b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.107049Z",
+        "date_updated": "2025-06-12T07:37:50.107052Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "9b3cd6ea-5863-4e6a-a9f1-8a02ceae8f67",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.107535Z",
+        "date_updated": "2025-06-12T07:37:50.107538Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "6316d893-7882-4ec6-b077-0ea199cb7fff",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.108002Z",
+        "date_updated": "2025-06-12T07:37:50.108005Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "693515ba-dea0-4c4b-969d-75fadee2a741",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.108480Z",
+        "date_updated": "2025-06-12T07:37:50.108484Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "200ef697-7a7d-412b-8cd2-da88bea32e77",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.109072Z",
+        "date_updated": "2025-06-12T07:37:50.109077Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "3794ca90-4cfe-43a5-959c-b39dc6dcc6da",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.109619Z",
+        "date_updated": "2025-06-12T07:37:50.109624Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "082fe1ab-3b34-4fb0-9f15-2ff74ef23d4a",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.110243Z",
+        "date_updated": "2025-06-12T07:37:50.110249Z",
+        "parking_location": "75c4b76f-3f91-4b54-beff-c529ca07c078"
+    },
+    {
+        "id": "231d86cb-32b7-4987-b0dc-2bc209119eb9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.110734Z",
+        "date_updated": "2025-06-12T07:37:50.110738Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "4ae65dfc-f3eb-4b74-b39d-fcd824171175",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.111544Z",
+        "date_updated": "2025-06-12T07:37:50.111548Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "4dfcaaef-d349-4013-9452-0382a97aa3a5",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.112014Z",
+        "date_updated": "2025-06-12T07:37:50.112018Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "0411b0ad-acba-4d42-a6cc-b44785db04f4",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.112459Z",
+        "date_updated": "2025-06-12T07:37:50.112463Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "a0315a58-0343-41b6-b8dd-e4bc69dc54cc",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.112983Z",
+        "date_updated": "2025-06-12T07:37:50.112987Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "a39a9700-92a0-4980-946e-800a6dddf040",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.113571Z",
+        "date_updated": "2025-06-12T07:37:50.113577Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "54f9e353-d216-45ab-8e4f-c46d9fe2baad",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.114152Z",
+        "date_updated": "2025-06-12T07:37:50.114157Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "11ca1d64-aa55-46f0-a3ba-be056f90793a",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.114717Z",
+        "date_updated": "2025-06-12T07:37:50.114722Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "75570190-dc50-4c7b-bff7-5a0da675fcd1",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.115372Z",
+        "date_updated": "2025-06-12T07:37:50.115375Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "1a7ef9a4-fa9e-465b-ba30-32b24b479fd6",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.115837Z",
+        "date_updated": "2025-06-12T07:37:50.115841Z",
+        "parking_location": "61de3ec4-93a3-45a8-953d-452b90c3e83e"
+    },
+    {
+        "id": "c726def7-7279-4c63-bf1e-5575a30f5e21",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.116321Z",
+        "date_updated": "2025-06-12T07:37:50.116324Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "32b7c3a0-a3ad-4779-b056-7df07dd23d35",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.116745Z",
+        "date_updated": "2025-06-12T07:37:50.116748Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "8d655613-f97b-4515-8768-3e3cbac7250c",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.117197Z",
+        "date_updated": "2025-06-12T07:37:50.117202Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "05df757f-0c89-4d86-a453-ef8c8088ec5c",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.117661Z",
+        "date_updated": "2025-06-12T07:37:50.117665Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "30cc7397-7e4e-4829-a2a0-425d56740fd9",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.118120Z",
+        "date_updated": "2025-06-12T07:37:50.118123Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "922b5aae-d2b0-4f3c-9176-f4d372c33d08",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.118579Z",
+        "date_updated": "2025-06-12T07:37:50.118583Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "3c8f6082-04cc-45e4-ae60-69dd11faa819",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.119035Z",
+        "date_updated": "2025-06-12T07:37:50.119038Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "a9eb96b2-db79-47ac-a83e-6022a86002a9",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.119461Z",
+        "date_updated": "2025-06-12T07:37:50.119464Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "6443fa48-45c5-47e2-a54b-b35bd83d4f1f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.119935Z",
+        "date_updated": "2025-06-12T07:37:50.119938Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "3320483a-8a72-4199-b9e4-9026cee7bc14",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.120372Z",
+        "date_updated": "2025-06-12T07:37:50.120375Z",
+        "parking_location": "a1a87145-0656-4acf-90b2-b43d093c9615"
+    },
+    {
+        "id": "fbc8a2f2-ac00-4d8e-8fe9-e8c9c220fbd2",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.120787Z",
+        "date_updated": "2025-06-12T07:37:50.120791Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "e8e996fc-4320-456a-bce9-ce2a6be9f2ef",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.121244Z",
+        "date_updated": "2025-06-12T07:37:50.121247Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "2d2c293c-3114-4c25-8176-b9c7cd47b24e",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.121750Z",
+        "date_updated": "2025-06-12T07:37:50.121754Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "0206a38c-5aad-4683-a17b-c5707a33a3f0",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.122304Z",
+        "date_updated": "2025-06-12T07:37:50.122308Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "37e7a0f9-099f-41cb-bf4a-e70f3b8aa2ed",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.122828Z",
+        "date_updated": "2025-06-12T07:37:50.122833Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "eac3a03d-36a1-49ed-989b-3b77122734e1",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.123352Z",
+        "date_updated": "2025-06-12T07:37:50.123356Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "9ade6b24-e82b-47dc-ae11-db876f8d170b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.123938Z",
+        "date_updated": "2025-06-12T07:37:50.123944Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "b24ad2b8-4566-489e-a057-a90308c75c1d",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.124512Z",
+        "date_updated": "2025-06-12T07:37:50.124517Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "e02b4883-acce-4865-88db-ab587cb66a0e",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.125004Z",
+        "date_updated": "2025-06-12T07:37:50.125009Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "bd306e70-c0d6-43c4-ab8b-272da64e57f5",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.125453Z",
+        "date_updated": "2025-06-12T07:37:50.125457Z",
+        "parking_location": "aac844c0-d99b-47ff-9f36-4c80882c57a9"
+    },
+    {
+        "id": "a12dc048-e2e6-4b98-b24d-161f5939480d",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.125897Z",
+        "date_updated": "2025-06-12T07:37:50.125900Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "4ed6d10d-6548-4192-9764-2202f260334e",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.126323Z",
+        "date_updated": "2025-06-12T07:37:50.126327Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "863b68da-b9fc-4b58-996f-de20b567ca45",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.126753Z",
+        "date_updated": "2025-06-12T07:37:50.126756Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "9ea5afcb-09cf-4c1f-bd0d-ad9d3aab5295",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.127186Z",
+        "date_updated": "2025-06-12T07:37:50.127190Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "35080362-b07b-4bb4-855e-a485d0492736",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.127611Z",
+        "date_updated": "2025-06-12T07:37:50.127614Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "9581d789-8915-41c4-9184-024e72254022",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.128033Z",
+        "date_updated": "2025-06-12T07:37:50.128037Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "6feb6562-eab4-41b8-b7b5-88a4217558b2",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.128456Z",
+        "date_updated": "2025-06-12T07:37:50.128459Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "a4c7feb3-3367-42ce-9139-021ac065a05d",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.128892Z",
+        "date_updated": "2025-06-12T07:37:50.128896Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "cbf54ec5-c3a2-4deb-8e60-040c86c5580d",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.129424Z",
+        "date_updated": "2025-06-12T07:37:50.129428Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "32e81993-e54c-41db-bc14-d9c27c32ef85",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.129961Z",
+        "date_updated": "2025-06-12T07:37:50.129966Z",
+        "parking_location": "319c8a31-e956-4621-b2d3-b960bb32a898"
+    },
+    {
+        "id": "a4846ef5-7661-4209-99f2-fc5099761fc6",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.130461Z",
+        "date_updated": "2025-06-12T07:37:50.130465Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "0e834031-ff97-4cfb-bf69-a2c958541ac5",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.131019Z",
+        "date_updated": "2025-06-12T07:37:50.131023Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "7cee6897-f203-4dd2-8e00-9f307b342378",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.131458Z",
+        "date_updated": "2025-06-12T07:37:50.131461Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "1c05407f-1dec-45bc-b7ab-b1a95998bf74",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.131908Z",
+        "date_updated": "2025-06-12T07:37:50.131912Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "0179cb38-fc38-4d0e-a76d-4ce1cb91ce39",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.132337Z",
+        "date_updated": "2025-06-12T07:37:50.132340Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "5bbd8dfd-3098-4ab0-8942-39b725468c73",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.132767Z",
+        "date_updated": "2025-06-12T07:37:50.132771Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "179c3c61-dc7f-404b-b252-24f91d2e2a6b",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.133196Z",
+        "date_updated": "2025-06-12T07:37:50.133199Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "fc673d28-dbe7-4208-b278-a945b9395f0c",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.133621Z",
+        "date_updated": "2025-06-12T07:37:50.133624Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "6ec3c922-44e7-45f4-b9a0-dbf621ab23ad",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.134050Z",
+        "date_updated": "2025-06-12T07:37:50.134053Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "7f946ef8-9e26-4fab-b60a-44224462a4d8",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.134472Z",
+        "date_updated": "2025-06-12T07:37:50.134486Z",
+        "parking_location": "08c8074c-5004-40b8-9c4a-5df86d84ac83"
+    },
+    {
+        "id": "bad547c2-1be2-4272-9794-a76bfa915f6f",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.134918Z",
+        "date_updated": "2025-06-12T07:37:50.134921Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "f90ab149-94f5-4b03-91f2-ff2a0064f8f4",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.135397Z",
+        "date_updated": "2025-06-12T07:37:50.135402Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "9bf597de-7def-49a3-a6b7-121cfbb7b88b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.135918Z",
+        "date_updated": "2025-06-12T07:37:50.135924Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "a78cb3e1-d56a-4bc2-9d64-c4913094233f",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.136457Z",
+        "date_updated": "2025-06-12T07:37:50.136461Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "8204e873-e387-4c9d-870a-817045cc1a29",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.136945Z",
+        "date_updated": "2025-06-12T07:37:50.136948Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "7881c88c-cb84-4bd7-8276-2382c00f4627",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.137379Z",
+        "date_updated": "2025-06-12T07:37:50.137382Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "0cbeca46-1973-48e6-90e7-1c729732f8cd",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.137813Z",
+        "date_updated": "2025-06-12T07:37:50.137817Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "2b5e3832-10c2-45a9-859b-aed7f6cf43c8",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.138613Z",
+        "date_updated": "2025-06-12T07:37:50.138616Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "0b037dfd-44f8-411a-81eb-47642a7530e6",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.139078Z",
+        "date_updated": "2025-06-12T07:37:50.139082Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "7057ff19-e663-412d-9198-e59358b09344",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.139536Z",
+        "date_updated": "2025-06-12T07:37:50.139540Z",
+        "parking_location": "107a78df-c03b-47fb-9402-f2cf487c3bfe"
+    },
+    {
+        "id": "be5fbc3a-7925-4b22-a09d-66ca3fd1ccec",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.139977Z",
+        "date_updated": "2025-06-12T07:37:50.139981Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "34c9d35d-568b-401a-848f-3094ff1006de",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.140444Z",
+        "date_updated": "2025-06-12T07:37:50.140448Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "a9e43e78-a8ff-4251-bd75-8c6736877a59",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.140917Z",
+        "date_updated": "2025-06-12T07:37:50.140920Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "6afc3b4f-0aec-4a67-9c33-a27dfd78cd93",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.141381Z",
+        "date_updated": "2025-06-12T07:37:50.141384Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "552db5ff-d2b9-4340-ad65-65f1e805af3e",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.141887Z",
+        "date_updated": "2025-06-12T07:37:50.141895Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "d753ea9e-0210-4612-a77f-98005f810159",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.142498Z",
+        "date_updated": "2025-06-12T07:37:50.142503Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "524b730f-ce69-4a19-9f28-e7ab35763d3b",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.143034Z",
+        "date_updated": "2025-06-12T07:37:50.143038Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "613ffe7a-5450-4424-ab34-15da7d8ac06e",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.143539Z",
+        "date_updated": "2025-06-12T07:37:50.143544Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "1889f7dd-1756-4bf6-beb2-4087fd9dff6d",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.144030Z",
+        "date_updated": "2025-06-12T07:37:50.144034Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "f9628563-8b95-4a31-b3ef-68e14002531f",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.144511Z",
+        "date_updated": "2025-06-12T07:37:50.144516Z",
+        "parking_location": "056d34bf-1c92-462d-bf5c-ef76e42dcfd0"
+    },
+    {
+        "id": "e26fced1-fdae-4843-9b97-25c25a5bc0db",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.145012Z",
+        "date_updated": "2025-06-12T07:37:50.145017Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "20492502-88d3-464d-9143-d22b084e8a3e",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.145502Z",
+        "date_updated": "2025-06-12T07:37:50.145506Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "53d13bf7-20da-43d9-a7d4-44626d87cb36",
+        "status": "available",
+        "date_created": "2025-06-12T07:37:50.145995Z",
+        "date_updated": "2025-06-12T07:37:50.145999Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "3af50f9b-0eb7-45c6-bb5a-02b0e66ae2ae",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.146509Z",
+        "date_updated": "2025-06-12T07:37:50.146513Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "18b23c39-6c51-4e83-bc38-e0d4dbafbfdb",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.146986Z",
+        "date_updated": "2025-06-12T07:37:50.146990Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "c39b5812-d6f6-4edd-a575-c0babdd46bf6",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.147578Z",
+        "date_updated": "2025-06-12T07:37:50.147582Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "1a4dad22-1d9b-4212-a48c-793883ce80e1",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.148083Z",
+        "date_updated": "2025-06-12T07:37:50.148087Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "a455a60f-a3c9-4809-927c-7460bf1699e2",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.148567Z",
+        "date_updated": "2025-06-12T07:37:50.148571Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "b3cf7b28-7fcc-4d39-b8d9-5b818ba50d4e",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.149062Z",
+        "date_updated": "2025-06-12T07:37:50.149066Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "73ce1c9d-e156-4c7a-af84-58760a62f8fc",
+        "status": "occupied",
+        "date_created": "2025-06-12T07:37:50.149548Z",
+        "date_updated": "2025-06-12T07:37:50.149552Z",
+        "parking_location": "3ccdb63e-474e-4c08-a71e-5f468e45e2a0"
+    },
+    {
+        "id": "054b0b7b-ab18-468e-b04b-22af862f2c5a",
+        "status": "available",
+        "date_created": "2025-06-12T07:23:08.719153Z",
+        "date_updated": "2025-06-15T13:17:18.004060Z",
+        "parking_location": "8c84d4d8-c1dc-44c5-8796-0669ad8a4e37"
+    }
+]

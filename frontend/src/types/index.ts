@@ -12,3 +12,11 @@ export interface Location {
   date_created: string;
   date_updated: string;
 }
+
+export interface Slot {
+  id: string;
+  status: "available" | "occupied" | "reserved";
+  date_created: string;
+  date_updated: string;
+  parking_location: string;
+}

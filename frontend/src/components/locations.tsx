@@ -11,7 +11,6 @@ import {
 
 import locationsData from "@/statics/locations.json";
 import { Location } from "@/types/index.ts";
-import { DeleteIcon, EditIcon } from "./icons";
 export interface LocationsProps {
   title?: string;
   subtitle?: string;
@@ -69,7 +68,7 @@ export const Locations: React.FC<LocationsProps> = ({
               <TableColumn>NAME</TableColumn>
               <TableColumn>DESCRIPTION</TableColumn>
               <TableColumn>LOCATION</TableColumn>
-                {/* <TableColumn>ACTIONS</TableColumn> */}
+              {/* <TableColumn>ACTIONS</TableColumn> */}
             </TableHeader>
             <TableBody>
               {items.map((loc) => (
@@ -77,7 +76,7 @@ export const Locations: React.FC<LocationsProps> = ({
                   <TableCell>{loc.name}</TableCell>
                   <TableCell>{loc.description}</TableCell>
                   <TableCell>{loc.location}</TableCell>
-                    {/* <TableCell>
+                  {/* <TableCell>
                     {isAdmin ? (
                       <div className="flex gap-2">
                       <button

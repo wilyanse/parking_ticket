@@ -5,6 +5,7 @@ import IndexPage from "@/pages/index";
 import LoginPage from "@/pages/login";
 import LogoutPage from "@/pages/logout";
 import LocationsPage from "@/pages/locations";
+import ParkingLotsPage from "@/pages/ParkingLotPage";
 // import DocsPage from "@/pages/docs";
 // import PricingPage from "@/pages/pricing";
 // import BlogPage from "@/pages/blog";
@@ -18,6 +19,8 @@ function App() {
       <Route element={<HomePage />} path="/home" />
       <Route element={<LogoutPage />} path="/logout" />
       <Route element={<LocationsPage />} path="/locations" />
+      <Route element={<HomePage />} path="/dashboard" />
+      <Route element={<ParkingLotsPage />} path="/locations/:lotId" />
       {/* <Route element={<DocsPage />} path="/docs" />
       <Route element={<PricingPage />} path="/pricing" />
       <Route element={<BlogPage />} path="/blog" />
