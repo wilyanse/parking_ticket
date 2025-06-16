@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-s63@=1ql#q$ed)20cos*tha)@-07bxzoxl2$$n!^(8+$c807o#
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "localhost").split(" ")
 
 # Add security headers
 SECURE_SSL_REDIRECT = True
