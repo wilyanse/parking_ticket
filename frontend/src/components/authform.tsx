@@ -5,12 +5,14 @@ export interface AuthFormProps {
   onLogin?: (email: string, password: string) => void;
   onSignUp?: (name: string, email: string, password: string) => void;
   initialTab?: "login" | "sign-up";
+  headerText?: React.ReactNode;
 }
 
 export const AuthForm: React.FC<AuthFormProps> = ({
   onLogin,
   onSignUp,
   initialTab = "login",
+  headerText,
 }) => {
   const [selected, setSelected] = React.useState<"login" | "sign-up">(
     initialTab,
@@ -37,16 +39,17 @@ export const AuthForm: React.FC<AuthFormProps> = ({
 
   return (
     <div className="flex flex-col w-full items-center">
-      <Card className="max-w-full w-[340px] h-[400px]">
-        <CardBody className="overflow-hidden">
+      <Card className="max-w-full w-auto h-auto">
+        <CardBody className="overflow-hidden px-6 py-4">
+          <div className="text-center mb-6">
+            <h2 className="text-2xl font-bold">{headerText ?? "Welcome"}</h2>
+          </div>
           <Tabs
             fullWidth
             aria-label="Tabs form"
             selectedKey={selected}
             size="md"
-            onSelectionChange={(key: string) =>
-              setSelected(key as "login" | "sign-up")
-            }
+            onSelectionChange={(key) => setSelected(key as "login" | "sign-up")}
           >
             <Tab key="login" title="Login">
               <form className="flex flex-col gap-4" onSubmit={handleLogin}>

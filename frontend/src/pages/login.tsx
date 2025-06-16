@@ -3,6 +3,7 @@ import { Tabs, Tab } from "@heroui/react";
 import { JSX } from "react/jsx-runtime";
 
 import DefaultLayout from "@/layouts/default";
+import AuthForm from "@/components/authform";
 
 export const CarIcon = (
   props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
@@ -51,10 +52,80 @@ export const AdminIcon = (
   );
 };
 
+const userIntro = (
+  <div>
+    <p className="mb-2">
+      <span className="font-semibold">Welcome to Parking Ticket!</span> Register
+      for an account or log in to:
+    </p>
+    <ul className="list-disc list-inside text-gray-600 mb-2">
+      <li>Reserve parking slots in real time</li>
+      <li>View and manage your active and past reservations</li>
+      <li>See live slot availability at all locations</li>
+      <li>Get notified about your bookings and reservation status</li>
+      <li>Update your profile and password</li>
+      <li>Enjoy a seamless parking experience</li>
+    </ul>
+    <p>Start by logging in or creating an account to access all features!</p>
+  </div>
+);
+
+const adminIntro = (
+  <div>
+    <p className="mb-2">
+      <span className="font-semibold">Admin Portal:</span> Log in to manage your
+      parking lot and users.
+    </p>
+    <ul className="list-disc list-inside text-gray-600 mb-2">
+      <li>Securely access the admin dashboard</li>
+      <li>Add, update, or delete parking locations</li>
+      <li>Define and manage slots for each location</li>
+      <li>View and manage all reservations</li>
+      <li>Monitor parking activity and user accounts</li>
+      <li>Keep your lot running smoothly</li>
+    </ul>
+    <p>
+      Use your admin credentials to get started managing your parking system.
+    </p>
+  </div>
+);
+
+const userWelcome = (
+  <div className="text-center mb-6">
+    <h2 className="text-2xl font-bold">Welcome, User!</h2>
+    <p className="text-gray-600 text-sm mt-2">
+      Access available parking, make reservations, and manage your account.
+    </p>
+  </div>
+);
+
+const adminWelcome = (
+  <div className="text-center mb-6">
+    <h2 className="text-2xl font-bold">Welcome, Admin!</h2>
+    <p className="text-gray-600 text-sm mt-2">
+      Manage parking locations, slots, users, and view reservation activity.
+    </p>
+  </div>
+);
+
+const overallWelcome = (
+  <div className="text-center mb-8">
+    <h1 className="text-3xl font-bold mb-2">
+      Parking Ticket: Treat your parking lot like it&apos;s a movie screening!
+    </h1>
+    <p className="text-gray-700 text-base max-w-xl mx-auto">
+      Parking Ticket is a full-stack application for seamless parking
+      management. Whether you&apos;re an admin or a user, you can manage
+      locations, slots, and reservations with ease.
+    </p>
+  </div>
+);
+
 export default function App() {
   return (
     <DefaultLayout>
       <div className="flex w-full flex-col">
+        {overallWelcome}
         <Tabs
           aria-label="Options"
           classNames={{
@@ -75,7 +146,16 @@ export default function App() {
                 <span>User</span>
               </div>
             }
-          />
+          >
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-1 flex justify-center m-auto">
+                <div className="text-gray-600">{userIntro}</div>
+              </div>
+              <div className="flex-1">
+                <AuthForm headerText={userWelcome} />
+              </div>
+            </div>
+          </Tab>
           <Tab
             key="music"
             title={
@@ -84,7 +164,16 @@ export default function App() {
                 <span>Admin</span>
               </div>
             }
-          />
+          >
+            <div className="flex flex-col md:flex-row gap-8 items-start">
+              <div className="flex-1 flex justify-center m-auto">
+                <div className="text-gray-600">{adminIntro}</div>
+              </div>
+              <div className="flex-1">
+                <AuthForm headerText={adminWelcome} />
+              </div>
+            </div>
+          </Tab>
         </Tabs>
       </div>
     </DefaultLayout>
