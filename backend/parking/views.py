@@ -37,6 +37,24 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
         locations = ParkingLocation.objects.filter(user_id=user_id)
         serializer = self.get_serializer(locations, many=True)
         return Response(serializer.data)
+    
+    @action(detail=True, methods=['post'])
+    def create_slot(self, request, pk=None):
+        location = self.get_object()
+        serializer = ParkingSlotSerializer(data=request.data)
+        if serializer.is_valid():
+            serializer.save(parking_location=location)
+            return Response(serializer.data, status=201)
+        return Response(serializer.errors, status=400)
+    
+    @action(detail=True, methods=['delete'], url_path='delete_slot')
+    def delete_slot(self, request, pk=None):
+        location = self.get_object()
+        latest_slot = location.slots.order_by('-id').first()
+        if not latest_slot:
+            return Response({"detail": "No slots to delete for this location."}, status=404)
+        latest_slot.delete()
+        return Response({"detail": "Latest slot deleted successfully."}, status=204)
 
 class ParkingSlotViewSet(viewsets.ModelViewSet):
     queryset = ParkingSlot.objects.all()

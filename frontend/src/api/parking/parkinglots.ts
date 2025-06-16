@@ -53,3 +53,19 @@ export async function getParkingSlotsByLocation(locationId: string) {
 
   return response.data;
 }
+
+export async function createParkingSlot(locationId: string) {
+  const response = await axiosInstance.post(
+    `${API_URL}/api/locations/${locationId}/create_slot/`,
+  );
+
+  return response.data;
+}
+
+export async function deleteParkingSlot(locationId: string) {
+  const response = await axiosInstance.delete(
+    `${API_URL}/api/locations/${locationId}/delete_slot/`,
+  );
+
+  return response.data;
+}

@@ -18,8 +18,8 @@ Specifically, an admin can:
     - [/] Backend - API call to update
     - [/] Backend - API call to delete
     - [/] Frontend - Add screen
-    - [ ] Frontend - Update screen
-    - [ ] Frontend - Delete screen
+    - [/] Frontend - Update screen
+    - [/] Frontend - Delete screen
 - [ ] Define the number of slots available for each location
     - [/] Backend - API call to list all parking locations
     - [/] Backend - API call to check number of slots available per parking location

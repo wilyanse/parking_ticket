@@ -18,7 +18,7 @@ import slotsData from "@/statics/slots.json";
 import locationsData from "@/statics/locations.json";
 import { Location, Slot } from "@/types/index.ts";
 import ParkingLotEdit from "@/components/ParkingLotEdit.tsx";
-
+import SlotActions from "@/components/SlotActions";
 export interface ParkingLotDetailsProps {
   isAdmin?: boolean;
   data?: Slot[];
@@ -28,7 +28,7 @@ export interface ParkingLotDetailsProps {
 const slotStatusOptions = [
   { name: "All", value: "all" },
   { name: "Available", value: "available" },
-  { name: "Occupied", value: "occupied" },
+  { name: "Unavailable", value: "unavailable" },
   { name: "Reserved", value: "reserved" },
 ];
 
@@ -86,33 +86,43 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
       </div>
 
       <div className="flex flex-col gap-3 max-w-2xl w-full">
-        <div className="flex justify-end mb-2">
-          <Dropdown>
-            <DropdownTrigger>
-              <Button variant="flat">
-                Filter:{" "}
-                {
-                  slotStatusOptions.find((opt) => opt.value === statusFilter)
-                    ?.name
-                }
-              </Button>
-            </DropdownTrigger>
-            <DropdownMenu
-              aria-label="Slot Status Filter"
-              selectedKeys={[statusFilter]}
-              selectionMode="single"
-              onSelectionChange={(keys) => {
-                const selected = Array.from(keys)[0] as string;
+        <div className="flex justify-between items-center mb-2">
+          <div className="flex gap-2">
+            {isAdmin && lotData?.id && (
+              <SlotActions
+                locationId={lotData.id}
+                onUpdated={() => window.location.reload()}
+              />
+            )}
+          </div>
+          <div>
+            <Dropdown>
+              <DropdownTrigger>
+                <Button variant="flat">
+                  Filter:{" "}
+                  {
+                    slotStatusOptions.find((opt) => opt.value === statusFilter)
+                      ?.name
+                  }
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu
+                aria-label="Slot Status Filter"
+                selectedKeys={[statusFilter]}
+                selectionMode="single"
+                onSelectionChange={(keys) => {
+                  const selected = Array.from(keys)[0] as string;
 
-                setStatusFilter(selected);
-                setPage(1);
-              }}
-            >
-              {slotStatusOptions.map((option) => (
-                <DropdownItem key={option.value}>{option.name}</DropdownItem>
-              ))}
-            </DropdownMenu>
-          </Dropdown>
+                  setStatusFilter(selected);
+                  setPage(1);
+                }}
+              >
+                {slotStatusOptions.map((option) => (
+                  <DropdownItem key={option.value}>{option.name}</DropdownItem>
+                ))}
+              </DropdownMenu>
+            </Dropdown>
+          </div>
         </div>
         <div className="overflow-x-auto">
           <Table
