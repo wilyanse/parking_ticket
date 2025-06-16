@@ -17,14 +17,14 @@ Specifically, an admin can:
     - [/] Backend - API call to add
     - [/] Backend - API call to update
     - [/] Backend - API call to delete
-    - [ ] Frontend - Add screen
+    - [/] Frontend - Add screen
     - [ ] Frontend - Update screen
     - [ ] Frontend - Delete screen
 - [ ] Define the number of slots available for each location
     - [/] Backend - API call to list all parking locations
     - [/] Backend - API call to check number of slots available per parking location
-    - [ ] Frontend - Table for parking locations
-    - [ ] Frontend - Individual parking location screen
+    - [/] Frontend - Table for parking locations
+    - [/] Frontend - Individual parking location screen
 - [ ] View a list of current and upcoming reservations
     - [/] Backend - API call to see list of reservations
     - [ ] Frontend - Table for reservations
@@ -46,8 +46,8 @@ Specifically, a user can:
 - [ ] Register for an account and log in securely.
     - [/] Backend - Login account
     - [/] Backend - Register account
-    - [ ] Frontend - Landing page with registration details
-    - [ ] Frontend - Landing page with login screen
+    - [/] Frontend - Landing page with registration details
+    - [/] Frontend - Landing page with login screen
 - [ ] Update account profile and password.
     - [/] Backend - Update account by ID
     - [ ] Frontend - Profile screen

@@ -17,6 +17,7 @@ import {
 import slotsData from "@/statics/slots.json";
 import locationsData from "@/statics/locations.json";
 import { Location, Slot } from "@/types/index.ts";
+import ParkingLotEdit from "@/components/ParkingLotEdit.tsx";
 
 export interface ParkingLotDetailsProps {
   isAdmin?: boolean;
@@ -64,7 +65,15 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
   return (
     <section className="flex flex-col items-center justify-center gap-8 py-10 md:py-16">
       <div className="inline-block max-w-2xl text-center justify-center">
-        <h2 className="text-2xl font-bold mb-2">{lotData?.name}</h2>
+        <div className="flex flex-col items-center gap-2 mb-2">
+          <h2 className="text-2xl font-bold">{lotData?.name}</h2>
+          {isAdmin && lotData && (
+            <ParkingLotEdit
+              lot={lotData}
+              onUpdated={() => window.location.reload()}
+            />
+          )}
+        </div>
         <p className="text-gray-600 mb-1">
           Available Slots: {availableSlots}/{totalSlots}
         </p>
@@ -75,6 +84,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
           Last Updated: {lotData?.date_updated}
         </p>
       </div>
+
       <div className="flex flex-col gap-3 max-w-2xl w-full">
         <div className="flex justify-end mb-2">
           <Dropdown>
