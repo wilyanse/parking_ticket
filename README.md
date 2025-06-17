@@ -63,10 +63,10 @@ Specifically, a user can:
     - [ ] Backend - send confirmation response
     - [ ] Backend - send details to email
     - [/] Frontend - screen for parking slot reservation
-- [ ] View active and past reservations.
+- [/] View active and past reservations.
     - [/] Backend - list reservations by user ID
     - [/] Frontend - table for reservations by user ID
-- [ ] Cancel a reservation before the start time.
+- [/] Cancel a reservation before the start time.
     - [/] Backend - modify reservation status
     - [/] Frontend - View reservation details by reservation ID
 - [ ] Receive alerts for reservation expiration or cancellation.

@@ -36,7 +36,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/frontio-ai/heroui",
-    docs: "https://heroui.com",
+    github: "https://github.com/wilyanse/parking_ticket",
   },
 };

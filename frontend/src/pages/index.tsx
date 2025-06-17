@@ -18,8 +18,8 @@ export default function IndexPage() {
           </p>
         </div>
 
-        <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl">
-          <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col">
+        <div className="flex flex-col md:flex-row gap-8 w-full max-w-4xl items-center text-center">
+          <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col items-center text-center">
             <h2 className="text-xl font-semibold mb-2">Admin Features</h2>
             <ul className="list-disc list-inside text-left text-gray-700 mb-4">
               <li>Secure login to admin dashboard</li>
@@ -39,7 +39,7 @@ export default function IndexPage() {
               </Link>
             </div>
           </div>
-          <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col">
+          <div className="flex-1 bg-background rounded-lg shadow p-6 flex flex-col items-center text-center">
             <h2 className="text-xl font-semibold mb-2">User Features</h2>
             <ul className="list-disc list-inside text-left text-gray-700 mb-4">
               <li>Register and log in securely</li>

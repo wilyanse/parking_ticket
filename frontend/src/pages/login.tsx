@@ -148,11 +148,11 @@ export default function App() {
               </div>
             }
           >
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1 flex justify-center m-auto">
                 <div className="text-gray-600">{userIntro}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 justify-center items-center">
                 <AuthForm
                   headerText={userWelcome}
                   onLogin={(username, password) =>
@@ -174,11 +174,11 @@ export default function App() {
               </div>
             }
           >
-            <div className="flex flex-col md:flex-row gap-8 items-start">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
               <div className="flex-1 flex justify-center m-auto">
                 <div className="text-gray-600">{adminIntro}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 justify-center text-center">
                 <AuthForm
                   headerText={adminWelcome}
                   onLogin={(username, password) =>
