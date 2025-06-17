@@ -1,0 +1,910 @@
+{
+	"info": {
+		"_postman_id": "0e1ffb06-6453-457d-839c-056aeebd085d",
+		"name": "PT-Admin",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "45772402",
+		"_collection_link": "https://will-3128278.postman.co/workspace/will's-Workspace~6ed84221-50cb-44ae-8a61-d2e4020dc4d0/collection/45772402-0e1ffb06-6453-457d-839c-056aeebd085d?action=share&source=collection_link&creator=45772402"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Stores the access token in an environment variable",
+							"var jsonData = pm.response.json();",
+							"pm.environment.set(\"accessToken\", jsonData.access);",
+							"pm.environment.set(\"refreshToken\", jsonData.refresh);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\": \"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}/api/token",
+					"host": [
+						"{{backend}}"
+					],
+					"path": [
+						"api",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Refresh token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"// Stores the access token in an environment variable",
+							"var jsonData = pm.response.json();",
+							"pm.environment.set(\"accessToken\", jsonData.access);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "{{refreshToken}}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{backend}}/api/token/refresh/",
+					"host": [
+						"{{backend}}"
+					],
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin6\",\n    \"password\": \"$hash$password\",\n    \"email\": \"test@gmail.com\",\n    \"is_staff\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/users/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View parking locations",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"",
+							"// Check if the response is an array and has at least one element",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    const firstLocationId = response[0].id;",
+							"    pm.environment.set(\"testParkingLocationId\", firstLocationId);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/locations/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View parking locations per user",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"",
+							"// Check if the response is an array and has at least one element",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    const firstLocationId = response[0].id;",
+							"    pm.environment.set(\"testParkingLocationId\", firstLocationId);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/locations/by_user/?user_id=1",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"by_user",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View parking location by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"",
+							"// Check if the response is an array and has at least one element",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    const firstLocationId = response[0].id;",
+							"    pm.environment.set(\"testParkingLocationId\", firstLocationId);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/locations/{{testParkingLocationId}}",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"{{testParkingLocationId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add parking location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Postman created\",\n    \"location\": \"Poblacion\",\n    \"description\": \"test created from Postman\",\n    \"user_id\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}/api/locations/",
+					"host": [
+						"{{backend}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update parking location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Lot 11\",\n    \"location\": \"Zone B\",\n    \"description\": \"Welllllllllllllllllp\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}/api/locations/{{testParkingLocationId}}/",
+					"host": [
+						"{{backend}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"{{testParkingLocationId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete parking location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}/api/locations/{{testParkingLocationId}}/",
+					"host": [
+						"{{backend}}"
+					],
+					"path": [
+						"api",
+						"locations",
+						"{{testParkingLocationId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View slots per parking location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/locations/{{testParkingLocationId}}/slots",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"{{testParkingLocationId}}",
+						"slots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all parking slots",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    pm.environment.set(\"testSlotId\", response[0].id);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/slots",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"slots"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new parking slot by parking location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    pm.environment.set(\"testSlotId\", response[0].id);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/locations/{{testParkingLocationId}}/create_slot/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"{{testParkingLocationId}}",
+						"create_slot",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete parking slot by location",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"const response = pm.response.json();",
+							"if (Array.isArray(response) && response.length > 0) {",
+							"    pm.environment.set(\"testSlotId\", response[0].id);",
+							"}",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/locations/{{testParkingLocationId}}/delete_slot/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"{{testParkingLocationId}}",
+						"delete_slot",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Modify parking location slots",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"status\": \"cancelled\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/slots/{{testSlotId}}/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"slots",
+						"{{testSlotId}}",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all reservations",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/reservations",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all reservations by owner",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/reservations/by_owner/?owner_id=1",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"reservations",
+						"by_owner",
+						""
+					],
+					"query": [
+						{
+							"key": "owner_id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all reservations per location",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/locations/{{testParkingLocationId}}/reservations",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"locations",
+						"{{testParkingLocationId}}",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View all reservations per slot",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/slots/{{testSlotId}}/reservations",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"slots",
+						"{{testSlotId}}",
+						"reservations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new reservation",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"start_time\": \"2025-06-16T19:08:07.526966Z\",\n    \"end_time\": \"2025-06-16T21:08:07.526966Z\",\n    \"user\": 2,\n    \"parking_location\": \"bd59446b-9314-4248-ba34-899d7c2627fe\",\n    \"parking_slot\": \"e155eb79-1f13-46ef-bbbc-32f94e3bacbb\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/reservations/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"reservations",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View reservations per user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/reservations/by_user/?user_id=2",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"reservations",
+						"by_user",
+						""
+					],
+					"query": [
+						{
+							"key": "user_id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View parking activity",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "View user accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{backend}}api/users/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deactivate user accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "is_active",
+							"value": "false",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{backend}}api/users/1/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"users",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reactivate user accounts",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{accessToken}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"is_active\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{backend}}api/users/1/",
+					"host": [
+						"{{backend}}api"
+					],
+					"path": [
+						"users",
+						"1",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
