@@ -8,6 +8,9 @@ Parking ticket serves as a full-stack application that runs on React, Django, an
 ### Features
 In Parking ticket, you have 2 roles! You can be an admin, one that owns and manages the parking lot and the mobile app, or a user, one that aims to use the app to see if there are any parking spaces available.
 
+### Youtube Video
+https://youtu.be/Bm0nZnrR1as
+
 Specifically, an admin can:
 - [/] Log in securely to access the admin dashboard.
     - [/] Backend - API call to login
@@ -137,3 +140,6 @@ For synthetic data:
 2. Activate virtual python environment with `source .venv/bin/activate`
 3. Run `cd backend`
 4. Run `python ./utils/init_synthetic_data.py`
+
+## If confused, contact me at:
+willjose51@gmail.com
