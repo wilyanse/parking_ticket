@@ -9,7 +9,7 @@ Parking ticket serves as a full-stack application that runs on React, Django, an
 In Parking ticket, you have 2 roles! You can be an admin, one that owns and manages the parking lot and the mobile app, or a user, one that aims to use the app to see if there are any parking spaces available.
 
 Specifically, an admin can:
-- [ ] Log in securely to access the admin dashboard.
+- [/] Log in securely to access the admin dashboard.
     - [/] Backend - API call to login
     - [/] Backend - Limit views based on group/permissions
     - [/] Frontend - Admin dashboard
@@ -36,11 +36,11 @@ Specifically, an admin can:
     - [ ] Frontend - Data dashboard of parking activities
         - May include reservations per day/per week/ per month
         - Include statistical comparison from day to day, week to week, month to month
-- [ ] Manage user accounts (view and deactivate if needed).
+- [/] Manage user accounts (view and deactivate if needed).
     - [/] Backend - API call to see list of user accounts
     - [/] Backend - API call to modify user account by ID
-    - [ ] Frontend - Screen for list of user accounts
-    - [ ] Frontend - Screen for individual accounts
+    - [/] Frontend - Screen for list of user accounts
+    - [/] Frontend - Screen for individual accounts
 
 Specifically, a user can:
 - [/] Register for an account and log in securely.
@@ -48,10 +48,10 @@ Specifically, a user can:
     - [/] Backend - Register account
     - [/] Frontend - Landing page with registration details
     - [/] Frontend - Landing page with login screen
-- [ ] Update account profile and password.
+- [/] Update account profile and password.
     - [/] Backend - Update account by ID
-    - [ ] Frontend - Profile screen
-    - [ ] Frontend - Change details screen
+    - [/] Frontend - Profile screen
+    - [/] Frontend - Change details screen
 - [/] View a list or visual representation of available parking locations.
     - [/] Backend - Obtain list of parking locations
     - [/] Frontend - Table to see parking locations
@@ -131,3 +131,9 @@ Backend:
 
 Or for a dockerized development environment, run `docker compose -f docker-compose.dev.yml up`
 >NOTE: Running the dockerized development environment will require running `pip freeze > requirements.txt` and rebuilding the docker containers in order to reflect new python modules.
+
+For synthetic data:
+1. Create virtual python environment with `python3 -m venv .venv`
+2. Activate virtual python environment with `source .venv/bin/activate`
+3. Run `cd backend`
+4. Run `python ./utils/init_synthetic_data.py`
