@@ -1,3 +1,5 @@
+// Edit parking lot details component
+
 import React from "react";
 import {
   Pagination,
@@ -49,6 +51,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
     return data.filter((slot) => slot.status === statusFilter);
   }, [data, statusFilter]);
 
+  // Pagination logic for filtered data
   const pages = Math.ceil(filteredData.length / rowsPerPage);
 
   const items = React.useMemo(() => {
@@ -68,6 +71,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
       <div className="inline-block max-w-2xl text-center justify-center">
         <div className="flex flex-col items-center gap-2 mb-2">
           <h2 className="text-2xl font-bold">{lotData?.name}</h2>
+          {/* Show edit button only if admin */}
           {isAdmin && lotData && (
             <ParkingLotEdit
               lot={lotData}
@@ -89,6 +93,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
       <div className="flex flex-col gap-3 max-w-2xl w-full">
         <div className="flex justify-between items-center mb-2">
           <div className="flex gap-2">
+            {/* Show actions only if admin */}
             {isAdmin && lotData?.id && (
               <SlotActions
                 locationId={lotData.id}
@@ -97,6 +102,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
             )}
           </div>
           <div>
+            {/* Dropdown for slot status filter */}
             <Dropdown>
               <DropdownTrigger>
                 <Button variant="flat">
@@ -147,6 +153,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
             }}
             selectionMode="single"
           >
+            {/* Table header with column names */}
             <TableHeader>
               <TableColumn className="text-center">ID</TableColumn>
               <TableColumn className="text-center">STATUS</TableColumn>
@@ -157,6 +164,7 @@ export const ParkingLotDetails: React.FC<ParkingLotDetailsProps> = ({
                 <span className="text-gray-500">No slots found.</span>
               }
             >
+              {/* Map through items to create table rows */}
               {items.map((slot, idx) => (
                 <TableRow key={slot.id}>
                   <TableCell className="text-center">

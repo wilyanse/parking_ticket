@@ -1,3 +1,5 @@
+// Parking lot modal popup when edit button is pressed
+
 import {
   Modal,
   ModalContent,
@@ -35,6 +37,7 @@ export default function ParkingLotEdit({
     setDescription(lot?.description || "");
   }, [lot]);
 
+  // Function to handle the update of parking lot details
   const handleUpdate = async () => {
     if (!name || !location || !description) {
       alert("Please fill out all fields.");
@@ -54,6 +57,7 @@ export default function ParkingLotEdit({
     }
   };
 
+  // Function to handle the deletion of a parking lot
   const handleDelete = async () => {
     setLoading(true);
     try {
@@ -81,6 +85,7 @@ export default function ParkingLotEdit({
               <ModalHeader className="flex flex-col gap-1">
                 Edit Parking Lot
               </ModalHeader>
+              {/* Form for parking lot editing */}
               <ModalBody>
                 <Input
                   label="Name"

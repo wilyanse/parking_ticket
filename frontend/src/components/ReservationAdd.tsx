@@ -1,3 +1,6 @@
+// Add reservation component
+// Used in coordination with slots
+
 import {
   Modal,
   ModalContent,

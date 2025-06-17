@@ -5,7 +5,7 @@ class AccountsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'accounts'
 
-
+    # runs default_groups_with_permissions after migrations
     def ready(self):
         from. import signals
         from .signals import create_default_groups_with_permissions

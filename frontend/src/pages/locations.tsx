@@ -1,10 +1,16 @@
+// Parking lots page
+// Data passed to component depends on admin or not
+
 import type { Location } from "@/types";
 
 import { useEffect, useState } from "react";
 
 import DefaultLayout from "@/layouts/default";
 import { Locations } from "@/components/locations";
-import { getParkingLocations, getParkingLocationsByUser } from "@/api/parking/parkinglots";
+import {
+  getParkingLocations,
+  getParkingLocationsByUser,
+} from "@/api/parking/parkinglots";
 
 export default function LocationsPage() {
   const [locations, setLocations] = useState<Location[] | null>(null);
@@ -31,7 +37,7 @@ export default function LocationsPage() {
 
   return (
     <DefaultLayout>
-      {isAdmin && locations && <Locations data={locations}/>}
+      {isAdmin && locations && <Locations data={locations} />}
       {!isAdmin && locations && <Locations data={locations} isAdmin={false} />}
     </DefaultLayout>
   );

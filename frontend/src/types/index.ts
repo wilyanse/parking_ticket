@@ -4,6 +4,7 @@ export type IconSvgProps = SVGProps<SVGSVGElement> & {
   size?: number;
 };
 
+// Parking Lots
 export interface Location {
   id: string;
   name: string;
@@ -13,6 +14,7 @@ export interface Location {
   date_updated: string;
 }
 
+// Parking Slots
 export interface Slot {
   id: string;
   status: "available" | "occupied" | "reserved";
@@ -21,6 +23,7 @@ export interface Slot {
   parking_location: string;
 }
 
+// Reservations
 export interface Reservation {
   id: string;
   start_time: string;
@@ -34,6 +37,7 @@ export interface Reservation {
   username: string;
 }
 
+// user
 export interface User {
   id?: number;
   username?: string;

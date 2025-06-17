@@ -8,6 +8,8 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
     queryset = ParkingLocation.objects.all()
     serializer_class = ParkingLocationSerializer
 
+    # Custom permission handling based on action
+    # This method defines which user groups can access each action in the viewset.
     def get_permissions(self):
         if self.action in ['list', 'retrieve']:
             self.allowed_groups = ['admin', 'user']
@@ -15,6 +17,9 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
             self.allowed_groups = ['admin']
         return super().get_permissions()
     
+    # Slots and reservations actions
+    # These actions allow users to retrieve slots and reservations for a specific parking location.
+    # They are defined as custom actions in the viewset.
     @action(detail=True, methods=['get'])
     def slots(self, request, pk=None):
         location = self.get_object()
@@ -29,6 +34,10 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
         serializer = ReservationSerializer(reservations, many=True)
         return Response(serializer.data)
     
+    # GET parking locations by user
+    # This action retrieves all parking locations associated with a specific user.
+    # It requires a user_id query parameter to filter the locations.
+    # If user_id is not provided, it returns a 400 Bad Request response.
     @action(detail=False, methods=['get'], url_path='by_user')
     def by_user(self, request):
         user_id = request.query_params.get('user_id')
@@ -38,6 +47,10 @@ class ParkingLocationViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(locations, many=True)
         return Response(serializer.data)
     
+    # Custom actions for creating and deleting parking slots
+    # These actions allow users to create a new parking slot for a specific parking location
+    # and delete the latest parking slot for that location.
+
     @action(detail=True, methods=['post'])
     def create_slot(self, request, pk=None):
         location = self.get_object()
@@ -91,6 +104,9 @@ class ReservationViewSet(viewsets.ModelViewSet):
     queryset = Reservation.objects.all()
     serializer_class = ReservationSerializer
 
+    # Slot reservation logic
+    # This method handles the creation of a reservation and updates the status of the parking slot.
+    # It assumes that the user is authenticated and sets the user field of the reservation to the current user.
     def perform_create(self, serializer):
         reservation = serializer.save(user=self.request.user)  # Assuming the user is authenticated
         # Set the status of the parking slot to 'reserved'
@@ -99,6 +115,8 @@ class ReservationViewSet(viewsets.ModelViewSet):
             slot.status = 'reserved'
             slot.save()
 
+    # Get reservations by user
+    # Reservations that belong to the user
     @action(detail=False, methods=['get'], url_path='by_user')
     def by_user(self, request):
         user_id = request.query_params.get('user_id')
@@ -108,6 +126,8 @@ class ReservationViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(reservations, many=True)
         return Response(serializer.data)
     
+    # Get reservations by owner
+    # Reservations for locations owned by a specific user
     @action(detail=False, methods=['get'], url_path='by_owner')
     def by_owner(self, request):
         """

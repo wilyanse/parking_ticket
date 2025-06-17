@@ -1,3 +1,5 @@
+// Buttons for managing parking slot - admin side
+
 import { Button } from "@heroui/react";
 import React from "react";
 

@@ -2,6 +2,9 @@ from django.db.models.signals import post_migrate
 from django.dispatch import receiver
 from django.contrib.auth import get_user_model
 
+# This signal creates default groups with permissions after migrations
+# are applied. It ensures that the necessary groups and permissions
+# are set up for the application to function correctly.
 @receiver(post_migrate)
 def create_default_groups_with_permissions(sender, **kwargs):
     from django.contrib.auth.models import Group, Permission

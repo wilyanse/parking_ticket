@@ -1,3 +1,5 @@
+// Built in navbar from HeroUI component library
+
 import { Link } from "@heroui/link";
 import {
   Navbar as HeroUINavbar,

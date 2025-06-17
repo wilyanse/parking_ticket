@@ -11,6 +11,8 @@ class ParkingSlotSerializer(serializers.ModelSerializer):
     class Meta:
         model = ParkingSlot
         fields = '__all__'
+        # Make parking_location read-only to prevent modification via this serializer
+        # This ensures that the parking location cannot be changed when updating a parking slot
         read_only_fields = ['parking_location']
 
 class ReservationSerializer(serializers.ModelSerializer):

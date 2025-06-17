@@ -1,3 +1,6 @@
+// Specific parking lot page
+// like parking lot by ID page
+
 import React from "react";
 import { useParams } from "react-router-dom";
 
@@ -9,6 +12,7 @@ import {
 } from "@/api/parking/parkinglots";
 
 export default function LocationsPage() {
+  // setup perms
   const userStr = localStorage.getItem("currentUser");
   const user = userStr ? JSON.parse(userStr) : null;
   const isAdmin = user && user.is_staff === true;
@@ -19,6 +23,7 @@ export default function LocationsPage() {
   const [slots, setSlots] = React.useState<any[]>([]);
   const [loading, setLoading] = React.useState(true);
 
+  // API calls
   React.useEffect(() => {
     async function fetchData() {
       setLoading(true);

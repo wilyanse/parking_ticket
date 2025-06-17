@@ -1,6 +1,7 @@
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 
+// TODO: change to this when going to prod
 // const API_URL = import.meta.env.VITE_API_URL;
 const API_URL = "http://localhost:8000";
 
@@ -12,6 +13,7 @@ interface JwtPayload {
   [key: string]: any;
 }
 
+// Automatically set up an Axios instance with the base URL and authorization headers
 const axiosInstance = axios.create({
   baseURL: API_URL,
   headers: {
@@ -20,6 +22,7 @@ const axiosInstance = axios.create({
   },
 });
 
+// Add an interceptor to handle token refresh before each request
 axiosInstance.interceptors.request.use(
   async (config: any) => {
     if (accessToken) {

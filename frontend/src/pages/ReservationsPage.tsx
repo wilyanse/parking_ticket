@@ -1,3 +1,6 @@
+// Reservations page
+// Passes in different data to component
+
 import type { Reservation } from "@/types";
 
 import { useEffect, useState } from "react";

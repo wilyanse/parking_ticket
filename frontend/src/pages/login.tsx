@@ -1,3 +1,5 @@
+// Auth page
+
 import React from "react";
 import { Tabs, Tab } from "@heroui/react";
 import { JSX } from "react/jsx-runtime";
@@ -6,6 +8,8 @@ import DefaultLayout from "@/layouts/default";
 import AuthForm from "@/components/authform";
 import { login, register } from "@/api/auth/authService";
 
+// TODO: Move to @/components/icons.tsx
+// Icons
 export const CarIcon = (
   props: JSX.IntrinsicAttributes & React.SVGProps<SVGSVGElement>,
 ) => {
@@ -53,6 +57,8 @@ export const AdminIcon = (
   );
 };
 
+// TODO: move to somewhere else
+// Text
 const userIntro = (
   <div>
     <p className="mb-2">

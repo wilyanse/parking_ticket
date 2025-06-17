@@ -1,3 +1,5 @@
+# Basic dockerfile for development
+
 FROM node:20
 
 WORKDIR /app

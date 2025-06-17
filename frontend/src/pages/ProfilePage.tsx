@@ -1,3 +1,5 @@
+// Profiles page for routing
+
 import DefaultLayout from "@/layouts/default";
 import ProfileDetails from "@/components/ProfileDetails";
 

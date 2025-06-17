@@ -1,3 +1,5 @@
+// Users table for Admin
+
 import React from "react";
 import {
   Table,
@@ -36,6 +38,7 @@ export const Users: React.FC<UsersProps> = ({
   isAdmin = true,
   data = [],
 }) => {
+  // Pagination
   const [page, setPage] = React.useState(1);
   const rowsPerPage = 5;
   const [statusFilter, setStatusFilter] = React.useState<string>("all");
@@ -55,7 +58,8 @@ export const Users: React.FC<UsersProps> = ({
 
     return users;
   }, [users, statusFilter]);
-
+  
+  // Pagination and filtering logic
   const pages = Math.ceil(filteredData.length / rowsPerPage);
 
   const items = React.useMemo(() => {
@@ -126,6 +130,7 @@ export const Users: React.FC<UsersProps> = ({
               <TableColumn>ACTION</TableColumn>
             </TableHeader>
             <TableBody>
+              {/* Map user to table */}
               {items.map((user) => (
                 <TableRow key={user.id}>
                   <TableCell>{user.username}</TableCell>

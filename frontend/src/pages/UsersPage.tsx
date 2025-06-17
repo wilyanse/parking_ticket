@@ -1,3 +1,5 @@
+// Users page for admin
+
 import type { User } from "@/types";
 
 import { useEffect, useState } from "react";

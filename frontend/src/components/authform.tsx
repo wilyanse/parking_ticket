@@ -1,9 +1,17 @@
 import React from "react";
 import { Tabs, Tab, Input, Link, Button, Card, CardBody } from "@heroui/react";
 
+// Props for reusability and flexibility
 export interface AuthFormProps {
-  onLogin?: (email: string, password: string) => Promise<{ error?: string } | void> | { error?: string } | void;
-  onSignUp?: (name: string, email: string, password: string) => Promise<{ error?: string } | void> | { error?: string } | void;
+  onLogin?: (
+    email: string,
+    password: string,
+  ) => Promise<{ error?: string } | void> | { error?: string } | void;
+  onSignUp?: (
+    name: string,
+    email: string,
+    password: string,
+  ) => Promise<{ error?: string } | void> | { error?: string } | void;
   initialTab?: "login" | "sign-up";
   headerText?: React.ReactNode;
 }
@@ -29,12 +37,12 @@ export const AuthForm: React.FC<AuthFormProps> = ({
 
   const [error, setError] = React.useState<string | null>(null);
 
+  // Reset form state when switching tabs
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
     try {
       const result = await onLogin?.(loginUsername, loginPassword);
-
 
       // If onLogin returns a value, check for error indication
       if (
@@ -51,6 +59,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
     }
   };
 
+  // Handle sign up form submission
   const handleSignUp = async (e: React.FormEvent) => {
     e.preventDefault();
     setError(null);
@@ -88,6 +97,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
             size="md"
             onSelectionChange={(key) => setSelected(key as "login" | "sign-up")}
           >
+            {/* Login form */}
             <Tab key="login" title="Login">
               <form className="flex flex-col gap-4" onSubmit={handleLogin}>
                 <Input
@@ -119,6 +129,7 @@ export const AuthForm: React.FC<AuthFormProps> = ({
                 </div>
               </form>
             </Tab>
+            {/* Sign up form */}
             <Tab key="sign-up" title="Sign up">
               <form
                 className="flex flex-col gap-4 h-[300px]"

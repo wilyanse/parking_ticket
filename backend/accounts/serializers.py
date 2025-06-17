@@ -4,8 +4,13 @@ from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
 
 User = get_user_model()
 
+# Serializers for User model and JWT token
+# This file contains serializers for the User model and JWT token handling.
 class UserSerializer(serializers.ModelSerializer):
+    # Disallows password from being read
     password = serializers.CharField(write_only=True)
+
+    # Planned for Mailgun integration
     email = serializers.EmailField(required=True)
 
     class Meta:
@@ -13,6 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'email', 'is_active', 'is_staff', 'password']
         read_only_fields = ['id']
 
+    # Custom create method to handle user creation
     def create(self, validated_data):
         user = User(
             username=validated_data['username'],
@@ -29,7 +35,7 @@ class CustomTokenObtainPairSerializer(TokenObtainPairSerializer):
     def get_token(cls, user):
         token = super().get_token(user)
 
-        # Add custom claims
+        # Add custom claims for frontend access
         token['username'] = user.username
         token['is_staff'] = user.is_staff
         token['email'] = user.email

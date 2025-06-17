@@ -1,3 +1,5 @@
+// Parking lot component
+// This component displays a list of parking locations with pagination and an option to add new locations.
 import React from "react";
 import {
   Table,
@@ -23,8 +25,9 @@ export const Locations: React.FC<LocationsProps> = ({
   title = "Parking Locations",
   subtitle = "Manage your parking locations and reservations efficiently.",
   isAdmin = true,
-  data = locationsData,
+  data = locationsData, // Default data can be replaced with actual data from an API or state management
 }) => {
+  // State to manage client side pagination
   const [page, setPage] = React.useState(1);
   const rowsPerPage = 5;
 
@@ -45,6 +48,7 @@ export const Locations: React.FC<LocationsProps> = ({
       </div>
       <div className="flex flex-col gap-3 w-full">
         <div className="flex w-full justify-end mb-2">
+          {/* Show only if admin */}
           <div className="w-auto">{isAdmin && <ParkingLotAdd />}</div>
         </div>
         <div className="w-full overflow-x-auto">
@@ -69,17 +73,18 @@ export const Locations: React.FC<LocationsProps> = ({
             }}
             selectionMode="single"
           >
+            {/* Table header with column names */}
             <TableHeader>
               <TableColumn>NAME</TableColumn>
               <TableColumn>DESCRIPTION</TableColumn>
               <TableColumn>LOCATION</TableColumn>
-              {/* <TableColumn>ACTIONS</TableColumn> */}
             </TableHeader>
             <TableBody
               emptyContent={
                 "No Parking Lots found. Start by adding a new Parking Lot."
               }
             >
+              {/* Map through items to create table rows */}
               {items.map((loc) => (
                 <TableRow
                   key={loc.id}

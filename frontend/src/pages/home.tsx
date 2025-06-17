@@ -1,3 +1,5 @@
+// Logged in landing page
+
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 import React, { useEffect } from "react";

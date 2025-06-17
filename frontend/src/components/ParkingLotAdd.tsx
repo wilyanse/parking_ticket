@@ -1,3 +1,5 @@
+// Create new parking lot component
+
 import {
   Modal,
   ModalContent,
@@ -25,12 +27,15 @@ export default function App() {
     const user = userStr ? JSON.parse(userStr) : null;
     const user_id = user?.user_id;
 
+    // Validate input fields
     if (!name || !location || !description || !user_id) {
       alert("Please fill out all fields.");
 
       return;
     }
 
+    // Create parking location
+    // This function should handle the API call to create a new parking location
     try {
       await createParkingLocation({
         name,
@@ -61,6 +66,7 @@ export default function App() {
               <ModalHeader className="flex flex-col gap-1">
                 Register Parking Lot
               </ModalHeader>
+              {/* Parking Lot form modal */}
               <ModalBody>
                 <Input
                   label="Name"
@@ -88,6 +94,7 @@ export default function App() {
                 <Button color="danger" variant="flat" onPress={onClose}>
                   Close
                 </Button>
+                {/* Create button that handles form submission */}
                 <Button
                   color="primary"
                   onPress={async () => {

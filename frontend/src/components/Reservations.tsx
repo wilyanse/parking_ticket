@@ -1,3 +1,6 @@
+// Reservations table
+// Componentized for reusability with admin and user side
+
 import React from "react";
 import {
   Table,

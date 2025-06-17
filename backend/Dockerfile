@@ -1,3 +1,5 @@
+# basic development Dockerfile for a Python application
+
 FROM python:3.11
 
 ENV PYTHONDONTWRITEBYTECODE 1

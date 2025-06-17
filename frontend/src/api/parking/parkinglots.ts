@@ -3,6 +3,7 @@ import axiosInstance from "@/api/axios";
 // const API_URL = import.meta.env.VITE_API_URL;
 const API_URL = "http://localhost:8000";
 
+// API call to create a new parking location
 export async function createParkingLocation(data: {
   name: string;
   location: string;
@@ -14,18 +15,21 @@ export async function createParkingLocation(data: {
   return response.data;
 }
 
+// API call to get all parking locations
 export async function getParkingLocations() {
   const response = await axiosInstance.get(`${API_URL}/api/locations/`);
 
   return response.data;
 }
 
+// API call to get a specific parking location by ID
 export async function getParkingLocationById(id: string) {
   const response = await axiosInstance.get(`${API_URL}/api/locations/${id}/`);
 
   return response.data;
 }
 
+// API call to get parking locations by the current user
 export async function getParkingLocationsByUser() {
   const currentUser = JSON.parse(localStorage.getItem("currentUser") || "{}");
   const user = currentUser.user_id;
@@ -37,6 +41,7 @@ export async function getParkingLocationsByUser() {
   return response.data;
 }
 
+// API calls to update, delete, and manage parking locations
 export async function updateParkingLocation(
   id: string,
   data: { name?: string; location?: string; description?: string },
@@ -57,6 +62,9 @@ export async function deleteParkingLocation(id: string) {
   return response.data;
 }
 
+// API calls to manage parking slots within a location
+// These functions allow you to get all slots for a location, create a new slot, and
+// delete a slot from a location.
 export async function getParkingSlotsByLocation(locationId: string) {
   const response = await axiosInstance.get(
     `${API_URL}/api/locations/${locationId}/slots/`,
@@ -81,6 +89,8 @@ export async function deleteParkingSlot(locationId: string) {
   return response.data;
 }
 
+// API calls to manage reservations for parking slots
+// These functions allow you to get reservations by slot ID, by owner, and by user.
 export async function getReservationsBySlotId(slotId: string) {
   const response = await axiosInstance.get(
     `${API_URL}/api/slots/${slotId}/reservations`,
@@ -111,6 +121,7 @@ export async function getReservationsByUser() {
   return response.data;
 }
 
+// API calls to manage reservation status
 export async function cancelReservationStatus(reservationId: string) {
   const response = await axiosInstance.patch(
     `${API_URL}/api/reservations/${reservationId}/`,

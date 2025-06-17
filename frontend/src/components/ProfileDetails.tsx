@@ -1,3 +1,5 @@
+// Profile component
+
 import {
   Modal,
   ModalContent,
@@ -13,6 +15,7 @@ import React from "react";
 import { logout, updateUser, disableUser } from "@/api/auth/authService";
 
 export default function ProfileDetails() {
+  // User logged in user details
   const userStr = localStorage.getItem("currentUser");
   const [user, setUser] = React.useState(userStr ? JSON.parse(userStr) : null);
 
@@ -30,6 +33,7 @@ export default function ProfileDetails() {
     }
   }, [isOpen, user]);
 
+  // API call to handle profile update
   const handleUpdate = async () => {
     if (!user?.user_id) return;
     setLoading(true);
@@ -48,6 +52,7 @@ export default function ProfileDetails() {
     }
   };
 
+  // Placeholder
   if (!user) {
     return (
       <div className="flex flex-col items-center justify-center py-10">
@@ -70,6 +75,7 @@ export default function ProfileDetails() {
           Role: {user.is_staff ? "Admin" : "User"}
         </p>
         <div className="flex flex-col gap-2 mt-6 items-center">
+          {/* Actions for profile page */}
           <div className="flex gap-2">
             <Button color="primary" onPress={onOpen}>
               Edit

@@ -1,3 +1,5 @@
+// Non-logged in login page
+
 import { Link } from "@heroui/link";
 import { button as buttonStyles } from "@heroui/theme";
 
@@ -61,36 +63,6 @@ export default function IndexPage() {
             </div>
           </div>
         </div>
-
-        {/*         <div className="flex gap-4 mt-4">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            GitHub
-          </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
-        </div> */}
       </section>
     </DefaultLayout>
   );
